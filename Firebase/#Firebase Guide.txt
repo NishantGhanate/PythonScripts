@@ -1,0 +1,7 @@
+1. pip install firebase-admin 
+
+2. Make project on firebase 
+
+3.Settings -> Project settings  -> service Accounts -> 
+	Firebase Admin SDk -> select python and generate Key
+ 
