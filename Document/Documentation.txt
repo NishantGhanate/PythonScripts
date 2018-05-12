@@ -1,0 +1,64 @@
+http://python-docx.readthedocs.io/en/latest/user/quickstart.html
+
+pip install python-docx
+
+from docx import Document
+
+document = Document()
+
+paragraph = document.add_paragraph('Lorem ipsum dolor sit amet.')
+
+prior_paragraph = paragraph.insert_paragraph_before('Lorem ipsum')
+
+document.add_heading('The role of dolphins', level=2)
+
+document.add_page_break()
+
+table = document.add_table(rows=2, cols=2)
+
+cell = table.cell(0, 1)
+cell.text = 'parrot, possibly dead'
+
+row = table.rows[1]
+row.cells[0].text = 'Foo bar to you.'
+row.cells[1].text = 'And a hearty foo bar to you too sir!'
+
+for row in table.rows:
+    for cell in row.cells:
+        print(cell.text)
+
+row_count = len(table.rows)
+col_count = len(table.columns)
+
+row = table.add_row()
+
+# get table data -------------
+items = get_things_from_database_or_something()
+
+# add table ------------------
+table = document.add_table(1, 3)
+
+# populate header row --------
+heading_cells = table.rows[0].cells
+heading_cells[0].text = 'Qty'
+heading_cells[1].text = 'SKU'
+heading_cells[2].text = 'Description'
+
+# add a data row for each item
+for item in items:
+    cells = table.add_row().cells
+    cells[0].text = str(item.qty)
+    cells[1].text = item.sku
+    cells[2].text = item.desc
+
+table.style = 'LightShading-Accent1'
+
+from docx.shared import Inches
+document.add_picture('image-filename.png', width=Inches(1.0))
+
+document.add_paragraph('Lorem ipsum dolor sit amet.', style='ListBullet')
+
+paragraph = document.add_paragraph('Normal text, ')
+run = paragraph.add_run('text with emphasis.')
+run.style = 'Emphasis'
+
