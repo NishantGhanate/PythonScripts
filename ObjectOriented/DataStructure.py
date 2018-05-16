@@ -8,14 +8,14 @@ class Que:
 
     def pop(self):
         if len(self._hiddenlist):
-            del self._hiddenlist[0]
+            self._hiddenlist.pop(0)
             print(self._hiddenlist)
         else:
             print("Empty Que")
         
-# que = Que([1, 2.25, 3.0, 4, 1234.5])
-# que.push(0)
-# que.pop()
+que = Que([1, 2.25, 3.0, 4, 1234.5])
+que.push(0)
+que.pop()
 
 
 class Node:
@@ -58,12 +58,12 @@ class Stack:
         else:
             return "This value pop =" +self.stack.pop()
 
-stack = Stack()
-stack.push("1")
-stack.push("2")
-stack.push("3")
-print(stack.pop())
-print(stack.push("5"))
+# stack = Stack()
+# stack.push("1")
+# stack.push("2")
+# stack.push("3")
+# print(stack.pop())
+# print(stack.push("5"))
 
 
 
