@@ -13,6 +13,43 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#centralwidget
+{
+	background-color:rgb(222,255,255);
+	
+}
+
+QPushButton#startButton
+{
+	background-color:rgb(0,255,10);
+	color:rgb(255,255,255);
+	
+ }
+
+QPushButton#stopButton
+{
+	background-color:rgb(200,0,0);
+	color:rgb(255,255,255);
+	
+ }
+
+QPushButton#saveLogsButton
+{
+	background-color:rgb(20,50,200);	
+	color:rgb(255,255,255);
+	
+ }
+
+
+
+
+
+
+
+	
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
@@ -79,8 +116,21 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionManage_Users"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuSettings"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionManage_Users">
+   <property name="text">
+    <string>Manage Users</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
