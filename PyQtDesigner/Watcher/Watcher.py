@@ -5,7 +5,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets , uic
 class WatcherUI(QtWidgets.QMainWindow):
     def __init__(self):
         super(WatcherUI,self).__init__()
-        uic.loadUi('H:/Github/PythonScripts/PyQtDesigner/Watcher/WatcherUI.ui',self)
+        uic.loadUi('H:/Github/PythonScripts/PyQtDesigner/Watcher/MainWindowUI.ui',self)
         #self.setFixedSize(500, 500)
         # self.setWindowIcon()
         self.setWindowTitle('Watcher') 
