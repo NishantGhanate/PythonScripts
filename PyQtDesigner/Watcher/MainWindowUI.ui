@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>836</width>
-    <height>750</height>
+    <height>605</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -117,14 +117,20 @@ QPushButton#saveLogsButton
      </rect>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="graphicsView">
+   <widget class="QLabel" name="labelWebCamera">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
+      <x>40</x>
+      <y>20</y>
       <width>500</width>
       <height>500</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
@@ -162,8 +168,8 @@ QPushButton#saveLogsButton
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>296</x>
-     <y>197</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>491</x>
