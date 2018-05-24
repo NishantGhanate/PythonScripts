@@ -1,2 +1,5 @@
 pip3 install PyQt5
 pip3 install PyQt5-tools
+
+css
+background-image:url(H:/Github/PythonScripts/PyQtDesigner/Watcher/trail.jpg);

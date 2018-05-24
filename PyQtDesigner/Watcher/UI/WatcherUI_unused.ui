@@ -17,6 +17,10 @@
    <string notr="true">QWidget#centralwidget
 {
 	background-color:rgb(222,255,255);
+	background-color:qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5,
+						stop:0 rgba(0, 169, 255, 147),
+						stop:0.497326 rgba(0, 0, 0, 147),
+						stop:1 rgba(0, 169, 255, 147));
 	
 }
 

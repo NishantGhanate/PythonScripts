@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>836</width>
-    <height>605</height>
+    <width>1325</width>
+    <height>691</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,15 +16,20 @@
   <property name="styleSheet">
    <string notr="true">QWidget#centralwidget
 {
-	background-color:rgb(222,255,255);
+	
+	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
 	
 }
 
 QPushButton#startButton
 {
 	background-color:rgb(0,255,10);
-	color:rgb(255,255,255);
-	border-radius:100px;
+	color:rgb(62, 80, 109);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
 	
  }
 
@@ -32,14 +37,24 @@ QPushButton#stopButton
 {
 	background-color:rgb(200,0,0);
 	color:rgb(255,255,255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
 	
  }
 
 QPushButton#saveLogsButton
 {
-	background-color:rgb(20,50,200);	
+	background-color:rgb(0,25,200);
 	color:rgb(255,255,255);
-	
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+		
  }
 
 
@@ -52,76 +67,31 @@ QPushButton#saveLogsButton
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="startButton">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>80</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Start </string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="stopButton">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>130</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stop</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="saveLogsButton">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>180</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>Save Logs</string>
-    </property>
-   </widget>
    <widget class="QListWidget" name="listWidgetLogs">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>250</y>
-      <width>181</width>
-      <height>81</height>
+      <x>790</x>
+      <y>40</y>
+      <width>500</width>
+      <height>500</height>
      </rect>
     </property>
    </widget>
    <widget class="QLCDNumber" name="logsCount">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>340</y>
-      <width>81</width>
-      <height>61</height>
+      <x>610</x>
+      <y>470</y>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
    </widget>
    <widget class="QLabel" name="labelWebCamera">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>20</y>
+      <x>30</x>
+      <y>50</y>
       <width>500</width>
       <height>500</height>
      </rect>
@@ -133,13 +103,64 @@ QPushButton#saveLogsButton
      <string/>
     </property>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>60</y>
+      <width>143</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="startButton">
+       <property name="text">
+        <string>Start </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stopButton">
+       <property name="text">
+        <string>Stop</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveLogsButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Save Logs</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>836</width>
+     <width>1325</width>
      <height>21</height>
     </rect>
    </property>
