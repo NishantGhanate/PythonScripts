@@ -1,0 +1,37 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: PyQRCode <https://pypi.python.org/pypi/PyQRCode/>
+%%CreationDate: 2018-05-28 22:25:18
+%%DocumentData: Clean7Bit
+%%BoundingBox: 0 0 66 66
+/M { moveto } bind def
+/m { rmoveto } bind def
+/l { rlineto } bind def
+2 2 scale
+newpath
+4 28.5 M 7 0 l 2 0 m 1 0 l 1 0 m 1 0 l 2 0 m 2 0 l 2 0 m 7 0 l
+4 27.5 M 1 0 l 5 0 m 1 0 l 3 0 m 1 0 l 5 0 m 1 0 l 1 0 m 1 0 l 5 0 m 1 0 l
+4 26.5 M 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l 1 0 m 2 0 l 1 0 m 2 0 l 1 0 m 1 0 l 3 0 m 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l
+4 25.5 M 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l 1 0 m 1 0 l 6 0 m 1 0 l 2 0 m 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l
+4 24.5 M 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l 2 0 m 3 0 l 1 0 m 1 0 l 1 0 m 1 0 l 2 0 m 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l
+4 23.5 M 1 0 l 5 0 m 1 0 l 2 0 m 1 0 l 4 0 m 2 0 l 2 0 m 1 0 l 5 0 m 1 0 l
+4 22.5 M 7 0 l 1 0 m 1 0 l 1 0 m 1 0 l 1 0 m 1 0 l 1 0 m 1 0 l 1 0 m 1 0 l 1 0 m 7 0 l
+4 21.5 M 9 0 m 2 0 l 1 0 m 2 0 l 1 0 m 1 0 l
+4 20.5 M 3 0 m 2 0 l 1 0 m 2 0 l 1 0 m 1 0 l 1 0 m 1 0 l 4 0 m 1 0 l 4 0 m 2 0 l
+4 19.5 M 1 0 l 2 0 m 2 0 l 2 0 m 1 0 l 1 0 m 1 0 l 1 0 m 3 0 l 5 0 m 5 0 l
+4 18.5 M 3 0 m 1 0 l 1 0 m 3 0 l 6 0 m 2 0 l 1 0 m 3 0 l 1 0 m 1 0 l 2 0 m 1 0 l
+4 17.5 M 1 0 l 2 0 m 2 0 l 3 0 m 1 0 l 1 0 m 1 0 l 2 0 m 1 0 l 2 0 m 1 0 l 1 0 m 1 0 l 2 0 m 4 0 l
+4 16.5 M 2 0 m 1 0 l 2 0 m 3 0 l 1 0 m 4 0 l 1 0 m 1 0 l 1 0 m 4 0 l 4 0 m 1 0 l
+4 15.5 M 1 0 l 3 0 m 1 0 l 2 0 m 2 0 l 3 0 m 3 0 l 5 0 m 1 0 l 2 0 m 1 0 l
+4 14.5 M 3 0 l 3 0 m 2 0 l 1 0 m 1 0 l 1 0 m 2 0 l 2 0 m 1 0 l 1 0 m 1 0 l 3 0 m 4 0 l
+4 13.5 M 1 0 l 1 0 m 1 0 l 1 0 m 2 0 l 1 0 m 2 0 l 1 0 m 1 0 l 1 0 m 3 0 l 4 0 m 2 0 l 1 0 m 1 0 l 1 0 m 1 0 l
+4 12.5 M 1 0 l 2 0 m 1 0 l 1 0 m 6 0 l 4 0 m 6 0 l 1 0 m 2 0 l
+4 11.5 M 8 0 m 1 0 l 1 0 m 1 0 l 3 0 m 3 0 l 3 0 m 1 0 l 2 0 m 1 0 l
+4 10.5 M 7 0 l 1 0 m 1 0 l 1 0 m 4 0 l 2 0 m 1 0 l 1 0 m 1 0 l 1 0 m 2 0 l 2 0 m 1 0 l
+4 9.5 M 1 0 l 5 0 m 1 0 l 3 0 m 1 0 l 1 0 m 1 0 l 2 0 m 2 0 l 3 0 m 1 0 l
+4 8.5 M 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l 1 0 m 1 0 l 6 0 m 7 0 l 1 0 m 1 0 l
+4 7.5 M 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l 1 0 m 1 0 l 1 0 m 2 0 l 1 0 m 1 0 l 2 0 m 4 0 l 1 0 m 1 0 l 2 0 m 1 0 l
+4 6.5 M 1 0 l 1 0 m 3 0 l 1 0 m 1 0 l 2 0 m 4 0 l 1 0 m 1 0 l 2 0 m 1 0 l 1 0 m 2 0 l 1 0 m 3 0 l
+4 5.5 M 1 0 l 5 0 m 1 0 l 4 0 m 2 0 l 1 0 m 1 0 l 3 0 m 3 0 l 1 0 m 3 0 l
+4 4.5 M 7 0 l 3 0 m 1 0 l 5 0 m 1 0 l 1 0 m 1 0 l 2 0 m 1 0 l 2 0 m 1 0 l
+stroke
+%%EOF
