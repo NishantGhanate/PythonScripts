@@ -70,9 +70,9 @@ QPushButton#saveLogsButton
    <widget class="QListWidget" name="listWidgetLogs">
     <property name="geometry">
      <rect>
-      <x>790</x>
+      <x>1019</x>
       <y>40</y>
-      <width>500</width>
+      <width>271</width>
       <height>500</height>
      </rect>
     </property>
@@ -80,8 +80,8 @@ QPushButton#saveLogsButton
    <widget class="QLCDNumber" name="logsCount">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>470</y>
+      <x>770</x>
+      <y>480</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -92,8 +92,8 @@ QPushButton#saveLogsButton
      <rect>
       <x>30</x>
       <y>50</y>
-      <width>500</width>
-      <height>500</height>
+      <width>640</width>
+      <height>480</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -109,8 +109,8 @@ QPushButton#saveLogsButton
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>60</y>
+      <x>770</x>
+      <y>80</y>
       <width>143</width>
       <height>361</height>
      </rect>

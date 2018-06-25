@@ -7,7 +7,7 @@ from firebase_admin import credentials , db , firestore , storage
 
 from PyQt5 import QtCore, QtGui, QtWidgets , uic 
 from PyQt5.QtGui import QImage ,QPixmap , QIcon
-
+from PyQt5.QtCore import QTimer
 
 
 class FireBase():
@@ -67,41 +67,40 @@ class WatcherUI(QtWidgets.QMainWindow):
         self.firebase = FireBase()
 
     QtCore.pyqtSlot()
+
     def activate_watcher_button(self):
         print('Watcher Activated')
-        self.cap = cv2.VideoCapture('H:/Github/OpenCv/Research/videos/car.mp4')
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT,500)
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH,500)
-        
-        while(1):
-            ret,img = self.cap.read()
-            # cv2.imshow('Original ',img)
-            print(img.shape[0])
-            # The image is stored using a 24-bit RGB format (8-8-8).
-            
-            qformat = QImage.Format_RGB888
-            # # img.shape[1] = col, [0] = row
-            outImage = QImage(img,img.shape[1],img.shape[0],img.shape[0],qformat)
-            # # BGR2RGB
-            outImage = outImage.rgbSwapped()
+        self.cap = cv2.VideoCapture(0)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH,640)
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.update_frame)
+        self.timer.start(1)
+
+    
+    def update_frame(self):
+        ret,self.image = self.cap.read()
+        self.displayImage(self.image,1)
+
+    def displayImage(self,img,window=1):
+        qformat = QImage.Format_Indexed8
+        qformat = QImage.Format_RGB888
+        outImage = QImage(img,img.shape[1],img.shape[0],img.strides[0],qformat)    
+        outImage = outImage.rgbSwapped()
+        if window ==1:
             self.labelWebCamera.setPixmap(QPixmap.fromImage(outImage))
             self.labelWebCamera.setScaledContents(True)
-
-            if cv2.waitKey(27) & 0xFF == ord('q'):            
-                break
-            if self.stop:
-                break
-
-        self.stop = False
-        self.cap.release()
-        cv2.destroyAllWindows()
-
-       
-
             
+
+         
     def sleep_watcher_button(self):
         print('Watching in silent mode always there for help')
-        self.stop = True
+        self.cap.release()
+        self.timer.stop()
+
+        
+
+        
           
 
     def save_logs_button(self):
