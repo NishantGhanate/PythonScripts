@@ -1,6 +1,8 @@
 import sys
 import os 
 import cv2
+from datetime import datetime
+import numpy as np
 
 import firebase_admin
 from firebase_admin import credentials , db , firestore , storage
@@ -13,16 +15,14 @@ from PyQt5.QtCore import QTimer
 class FireBase():
     def __init__(self):
         # Fetch the service account key JSON file contents
-        cred = credentials.Certificate('H:/Github/PythonScripts/Firebase/AdminSdk.json')
-        
+        cred = credentials.Certificate('H:/Github/PythonScripts/Firebase/AdminSdk.json')    
         # Initialize the app with a service account, granting admin privileges
         firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://pythonfirebase-449e8.firebaseio.com',
         'storageBucket': 'gs://pythonfirebase-449e8.appspot.com'
         })
       
-    def updateLog(self):
-       
+    def updateLog(self): 
         # ref = db.reference('/')   
         # print (ref.get() )
         db = firestore.client()
@@ -35,7 +35,6 @@ class FireBase():
         bucket = storage.bucket()
 
     def sendNotification(self):
-
         # This registration token comes from the client FCM SDKs.
         registration_token = 'YOUR_REGISTRATION_TOKEN'
         # See documentation on defining a message payload.
@@ -53,6 +52,17 @@ class FireBase():
 
 
 class WatcherUI(QtWidgets.QMainWindow):
+
+    cap = cv2.VideoCapture(0)
+    fgbg = cv2.createBackgroundSubtractorMOG2()
+    kernel = np.ones((3,3),np.uint8)
+    kernelSmooth = np.ones( (25,25),np.float32 ) / 625
+    ret , frame = cap.read()
+    pastFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    presentFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    pixelDifference = 125000
+    timeCheck = datetime.now().strftime('%Ss')
+    font = cv2.FONT_HERSHEY_SIMPLEX
     def __init__(self):
         super(WatcherUI,self).__init__()
         uic.loadUi('H:/Github/PythonScripts/PyQtDesigner/Watcher/MainWindowUI.ui',self)
@@ -62,11 +72,38 @@ class WatcherUI(QtWidgets.QMainWindow):
         self.setWindowTitle('Watcher') 
         self.startButton.clicked.connect(self.activate_watcher_button)
         self.stopButton.clicked.connect(self.sleep_watcher_button)
+        self.stopButton.setEnabled(False)
         self.saveLogsButton.clicked.connect(self.save_logs_button)
         self.stop = False
         self.firebase = FireBase()
 
     QtCore.pyqtSlot()
+
+    def ImageDifference(self,pastFrame,presentFrame):
+        diff = cv2.absdiff(pastFrame,presentFrame)
+        # print(diff.sum())
+        return diff.sum()
+
+    def motionCapture(self,img):
+        imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        smoothed = cv2.filter2D(imgray,-1,WatcherUI.kernelSmooth)
+        fgmask = WatcherUI.fgbg.apply(smoothed)
+
+        dilation = cv2.dilate(fgmask,WatcherUI.kernel,iterations = 2)
+        erosion = cv2.erode(dilation,WatcherUI.kernel,iterations = 5)
+
+        ret,thresh = cv2.threshold(erosion,127,255,0)
+        im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+       
+        if self.ImageDifference(pastFrame=WatcherUI.pastFrame,presentFrame=WatcherUI.presentFrame) > WatcherUI.pixelDifference and WatcherUI.timeCheck !=  datetime.now().strftime('%Ss')  :
+            timeStamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S') 
+            cv2.imwrite(timeStamp + '.jpg' , img) 
+            self.listWidgetLogs.addItem('Motion Detected at ' + timeStamp  )
+            self.firebase.updateLog()
+
+        WatcherUI.timeCheck = datetime.now().strftime('%Ss')    
+        WatcherUI.pastFrame , WatcherUI.presentFrame  = WatcherUI.presentFrame , erosion
+
 
     def activate_watcher_button(self):
         print('Watcher Activated')
@@ -76,10 +113,14 @@ class WatcherUI(QtWidgets.QMainWindow):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_frame)
         self.timer.start(1)
+        self.startButton.setEnabled(False)
+        self.stopButton.setEnabled(True)
 
-    
     def update_frame(self):
         ret,self.image = self.cap.read()
+        timeStamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        cv2.putText(self.image,timeStamp,(350,450), WatcherUI.font, 0.7,(255,255,255),2,cv2.LINE_AA)
+        self.motionCapture(self.image)
         self.displayImage(self.image,1)
 
     def displayImage(self,img,window=1):
@@ -90,25 +131,19 @@ class WatcherUI(QtWidgets.QMainWindow):
         if window ==1:
             self.labelWebCamera.setPixmap(QPixmap.fromImage(outImage))
             self.labelWebCamera.setScaledContents(True)
-            
 
-         
     def sleep_watcher_button(self):
         print('Watching in silent mode always there for help')
         self.cap.release()
         self.timer.stop()
-
-        
-
-        
-          
+        self.startButton.setEnabled(True)
+        self.stopButton.setEnabled(False)
 
     def save_logs_button(self):
         file = open('H:/Github/PythonScripts/PyQtDesigner/Watcher/Logs.txt','a+')
         file.write('This is a test') 
         file.close()
-        self.firebase.updateLog()
-        self.listWidgetLogs.addItem("a")
+        
         print('Logs saved Sucessfully')
 
 
