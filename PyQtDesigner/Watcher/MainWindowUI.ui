@@ -7,42 +7,77 @@
     <x>0</x>
     <y>0</y>
     <width>1325</width>
-    <height>691</height>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#centralwidget
+   <string notr="true">QMainWindow#MainWindow
 {
-	
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
-	
+	background-color:rgb(33,33,33);
+	background-image:url( H:/Github/PythonScripts/PyQtDesigner/Watcher/bg1.jpg);
+}
+
+QWidget#centralwidget
+{
+	background-image:url( H:/Github/PythonScripts/PyQtDesigner/Watcher/bg1.jpg);
+	background-color:rgb(33,33,33);
+}
+
+QLabel#labelMotionLogs
+{
+	color:rgb(224, 224, 224);
+}
+
+QLabel#labelWebTitle
+{
+	color:rgb(224, 224, 224);
 }
 
 QPushButton#startButton
 {
-	background-color:rgb(0,255,10);
-	color:rgb(62, 80, 109);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
+font-size: 16px;
+background-color: rgb(52, 140, 11);
+border-radius: 15px;
+padding: 4px;	
+border-style: inset;
+border-width:1.2px;
+box-shadow: 10px 10px rgb(255, 167, 38);
 	
  }
 
+QPushButton#startButton:hover:pressed 
+{
+border-style: outset;
+border-radius: 15px;
+border-width:1.2px;
+box-shadow: 10px 10px rgb(255, 152, 0);
+	
+ }
+
+
 QPushButton#stopButton
 {
-	background-color:rgb(200,0,0);
-	color:rgb(255,255,255);
-    padding: 4px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
+font-size: 16px;
+background-color: rgb(229, 27, 27);
+border-radius: 15px;
+padding: 4px;	
+border-style: inset;
+border-width:1.2px;
+box-shadow: 10px 10px rgb(255, 167, 38);
 	
+	
+ }
+
+QPushButton#stopButton:hover:pressed 
+{
+	
+border-style: outset;
+border-radius: 15px;
+border-width:1.2px;
+box-shadow: 10px 10px rgb(255, 152, 0);
 	
  }
 
@@ -52,15 +87,20 @@ font-size: 16px;
 background-color: orange;
 border-radius: 15px;
 padding: 4px;	
-border-width:10px;
+border-style: inset;
+border-width:1.2px;
+box-shadow: 10px 10px rgb(255, 167, 38);
+
 }
 
 
 QPushButton#saveLogsButton:hover:pressed 
 { 
-border-style: inset;
+
+border-style: outset;
 border-radius: 15px;
-box-shadow: 10px 10px grey;
+border-width:1.2px;
+box-shadow: 10px 10px rgb(255, 152, 0);
  
 }
 
@@ -77,18 +117,18 @@ box-shadow: 10px 10px grey;
    <widget class="QListWidget" name="listWidgetLogs">
     <property name="geometry">
      <rect>
-      <x>1019</x>
-      <y>40</y>
+      <x>1000</x>
+      <y>70</y>
       <width>271</width>
-      <height>500</height>
+      <height>480</height>
      </rect>
     </property>
    </widget>
    <widget class="QLCDNumber" name="logsCount">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>560</y>
+      <x>1000</x>
+      <y>590</y>
       <width>141</width>
       <height>55</height>
      </rect>
@@ -107,7 +147,7 @@ box-shadow: 10px 10px grey;
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>50</y>
+      <y>80</y>
       <width>640</width>
       <height>480</height>
      </rect>
@@ -125,9 +165,9 @@ box-shadow: 10px 10px grey;
    <widget class="QPushButton" name="saveLogsButton">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>560</y>
-      <width>151</width>
+      <x>1170</x>
+      <y>590</y>
+      <width>110</width>
       <height>55</height>
      </rect>
     </property>
@@ -157,7 +197,7 @@ box-shadow: 10px 10px grey;
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>560</y>
+      <y>590</y>
       <width>110</width>
       <height>55</height>
      </rect>
@@ -179,13 +219,51 @@ box-shadow: 10px 10px grey;
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>560</y>
+      <y>590</y>
       <width>110</width>
       <height>55</height>
      </rect>
     </property>
     <property name="text">
      <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWebTitle">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>30</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Webcamera Feed </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMotionLogs">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>30</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Motion Logs</string>
     </property>
    </widget>
   </widget>
