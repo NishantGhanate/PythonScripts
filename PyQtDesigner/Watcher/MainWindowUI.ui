@@ -17,13 +17,15 @@
    <string notr="true">QMainWindow#MainWindow
 {
 	background-color:rgb(33,33,33);
-	background-image:url( H:/Github/PythonScripts/PyQtDesigner/Watcher/bg1.jpg);
+	background-image:url( H:/Github/PythonScripts/PyQtDesigner/Watcher/bg7.jpg);
 }
+
 
 QWidget#centralwidget
 {
-	background-image:url( H:/Github/PythonScripts/PyQtDesigner/Watcher/bg1.jpg);
-	background-color:rgb(33,33,33);
+
+	/*background-image:url( H:/Github/PythonScripts/PyQtDesigner/Watcher/bg1.jpg);*/
+	background-color:rgb(33,33,33,0.5);
 }
 
 QLabel#labelMotionLogs
@@ -40,20 +42,19 @@ QPushButton#startButton
 {
 font-size: 16px;
 background-color: rgb(52, 140, 11);
-border-radius: 15px;
+border-radius: 25px;
 padding: 4px;	
 border-style: inset;
 border-width:1.2px;
-box-shadow: 10px 10px rgb(255, 167, 38);
+
 	
  }
 
 QPushButton#startButton:hover:pressed 
 {
 border-style: outset;
-border-radius: 15px;
 border-width:1.2px;
-box-shadow: 10px 10px rgb(255, 152, 0);
+
 	
  }
 
@@ -62,11 +63,11 @@ QPushButton#stopButton
 {
 font-size: 16px;
 background-color: rgb(229, 27, 27);
-border-radius: 15px;
+border-radius: 25px;
 padding: 4px;	
 border-style: inset;
 border-width:1.2px;
-box-shadow: 10px 10px rgb(255, 167, 38);
+
 	
 	
  }
@@ -75,9 +76,8 @@ QPushButton#stopButton:hover:pressed
 {
 	
 border-style: outset;
-border-radius: 15px;
 border-width:1.2px;
-box-shadow: 10px 10px rgb(255, 152, 0);
+
 	
  }
 
@@ -85,11 +85,11 @@ QPushButton#saveLogsButton[flat=&quot;false&quot;]
 {
 font-size: 16px;
 background-color: orange;
-border-radius: 15px;
+border-radius: 25px;
 padding: 4px;	
 border-style: inset;
 border-width:1.2px;
-box-shadow: 10px 10px rgb(255, 167, 38);
+
 
 }
 
@@ -98,12 +98,15 @@ QPushButton#saveLogsButton:hover:pressed
 { 
 
 border-style: outset;
-border-radius: 15px;
 border-width:1.2px;
-box-shadow: 10px 10px rgb(255, 152, 0);
+
  
 }
 
+QLCDNumber#logsCount
+{
+color:rgb(220, 0, 0);
+}
 
 
 
@@ -123,15 +126,24 @@ box-shadow: 10px 10px rgb(255, 152, 0);
       <height>480</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Sans Serif</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
    </widget>
    <widget class="QLCDNumber" name="logsCount">
     <property name="geometry">
      <rect>
-      <x>1000</x>
+      <x>1130</x>
       <y>590</y>
       <width>141</width>
       <height>55</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="frameShape">
      <enum>QFrame::WinPanel</enum>
@@ -152,8 +164,11 @@ box-shadow: 10px 10px rgb(255, 152, 0);
       <height>480</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="frameShape">
-     <enum>QFrame::WinPanel</enum>
+     <enum>QFrame::StyledPanel</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Sunken</enum>
@@ -165,7 +180,7 @@ box-shadow: 10px 10px rgb(255, 152, 0);
    <widget class="QPushButton" name="saveLogsButton">
     <property name="geometry">
      <rect>
-      <x>1170</x>
+      <x>1000</x>
       <y>590</y>
       <width>110</width>
       <height>55</height>
@@ -282,33 +297,22 @@ box-shadow: 10px 10px rgb(255, 152, 0);
     </property>
     <addaction name="actionManage_Users"/>
     <addaction name="separator"/>
+    <addaction name="actionAdd_User"/>
    </widget>
    <addaction name="menuSettings"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionManage_Users">
    <property name="text">
+    <string>Add User</string>
+   </property>
+  </action>
+  <action name="actionAdd_User">
+   <property name="text">
     <string>Manage Users</string>
    </property>
   </action>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>actionManage_Users</sender>
-   <signal>triggered()</signal>
-   <receiver>logsCount</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>491</x>
-     <y>262</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

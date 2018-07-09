@@ -22,27 +22,31 @@ class FireBase():
         'storageBucket': 'gs://pythonfirebase-449e8.appspot.com'
         })
       
-    def updateLog(self): 
-        # ref = db.reference('/')   
+    def updateLog(self):   
+        ref = db.reference('users/WMzLqZFN00NxwYllD9oKSMqiDuv1')
+        timeStamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S')
         # print (ref.get() )
-        db = firestore.client()
-        doc_ref = db.collection(u'users').document(u'SecurityLogs')
-        doc_ref.set({
-        u'first': u'Watcher',
-        u'last': u'-',
-        u'born': 1
-        })
-        bucket = storage.bucket()
+        ref.push(timeStamp)
+
+        # db = firestore.client()
+        # doc_ref = db.collection(u'users').document(u'WMzLqZFN00NxwYllD9oKSMqiDuv1')
+        
+        # data = {
+        #     timeStamp: {
+        #     u'a': 5,
+        #     u'b': True
+        #     }
+        # }
+        # doc_ref.set(data)
+
+        # bucket = storage.bucket()
 
     def sendNotification(self):
         # This registration token comes from the client FCM SDKs.
-        registration_token = 'YOUR_REGISTRATION_TOKEN'
+        registration_token = 'eQ5MSA8MCIk:APA91bGQ8ipstUdn_d7vvOv85PgNxkD3NKr-Srrjyd5j207h_2RSvXlb0nSf-pj6F8F1vIHhjobqlX4TYI-RB9qfHt8O1GTqp5AZ7kb0W-8i3zNBJMljA1f2pnV2ALxVJ5R6iifGx05lDMay9SKdVKzNblhsNAdIEw'
         # See documentation on defining a message payload.
         message = messaging.Message(
-        data={
-        'score': '850',
-        'time': '2:45',
-        },
+        data={'score': '850','time': '2:45',},
         token=registration_token,
         )
         # Send a message to the device corresponding to the provided
@@ -60,9 +64,10 @@ class WatcherUI(QtWidgets.QMainWindow):
     ret , frame = cap.read()
     pastFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     presentFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    pixelDifference = 125000
+    pixelDifference = 175000
     timeCheck = datetime.now().strftime('%Ss')
     font = cv2.FONT_HERSHEY_SIMPLEX
+
     def __init__(self):
         super(WatcherUI,self).__init__()
         uic.loadUi('H:/Github/PythonScripts/PyQtDesigner/Watcher/MainWindowUI.ui',self)
@@ -76,6 +81,7 @@ class WatcherUI(QtWidgets.QMainWindow):
         self.saveLogsButton.clicked.connect(self.save_logs_button)
         self.stop = False
         self.firebase = FireBase()
+        self.logCount = 0
 
     QtCore.pyqtSlot()
 
@@ -85,6 +91,7 @@ class WatcherUI(QtWidgets.QMainWindow):
         return diff.sum()
 
     def motionCapture(self,img):
+        
         imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         smoothed = cv2.filter2D(imgray,-1,WatcherUI.kernelSmooth)
         fgmask = WatcherUI.fgbg.apply(smoothed)
@@ -100,9 +107,12 @@ class WatcherUI(QtWidgets.QMainWindow):
             cv2.imwrite(timeStamp + '.jpg' , img) 
             self.listWidgetLogs.addItem('Motion Detected at ' + timeStamp  )
             self.firebase.updateLog()
+            self.logCount += 1
+            self.logsCount.display(self.logCount)
 
         WatcherUI.timeCheck = datetime.now().strftime('%Ss')    
         WatcherUI.pastFrame , WatcherUI.presentFrame  = WatcherUI.presentFrame , erosion
+
 
 
     def activate_watcher_button(self):
@@ -140,11 +150,13 @@ class WatcherUI(QtWidgets.QMainWindow):
         self.stopButton.setEnabled(False)
 
     def save_logs_button(self):
-        file = open('H:/Github/PythonScripts/PyQtDesigner/Watcher/Logs.txt','a+')
+        scriptDir = os.path.dirname(os.path.realpath(__file__))
+        file = open(scriptDir + os.path.sep +'Watcherlogs.txt','a+')
         file.write('This is a test') 
         file.close()
-        
         print('Logs saved Sucessfully')
+
+
 
 
 
