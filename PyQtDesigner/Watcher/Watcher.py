@@ -1,11 +1,11 @@
 import sys
 import os 
 import cv2
-from datetime import datetime
+from datetime import datetime , timedelta
 import numpy as np
 
 import firebase_admin
-from firebase_admin import credentials , db , firestore , storage
+from firebase_admin import credentials , db , firestore , storage , messaging  
 
 from PyQt5 import QtCore, QtGui, QtWidgets , uic 
 from PyQt5.QtGui import QImage ,QPixmap , QIcon
@@ -45,10 +45,19 @@ class FireBase():
         # This registration token comes from the client FCM SDKs.
         registration_token = 'eQ5MSA8MCIk:APA91bGQ8ipstUdn_d7vvOv85PgNxkD3NKr-Srrjyd5j207h_2RSvXlb0nSf-pj6F8F1vIHhjobqlX4TYI-RB9qfHt8O1GTqp5AZ7kb0W-8i3zNBJMljA1f2pnV2ALxVJ5R6iifGx05lDMay9SKdVKzNblhsNAdIEw'
         # See documentation on defining a message payload.
-        message = messaging.Message(
-        data={'score': '850','time': '2:45',},
-        token=registration_token,
+        message = messaging.Message( 
+            notification= messaging.Notification(
+                title='Watcher Detected motion ',
+                body='Action Required ',
+                ),
+            android=messaging.AndroidConfig(
+                ttl=timedelta(seconds=3600),
+                priority='normal',
+            ),     
+            token=registration_token,
         )
+
+
         # Send a message to the device corresponding to the provided
         response = messaging.send(message)
         print('Successfully sent message:', response)
@@ -104,11 +113,13 @@ class WatcherUI(QtWidgets.QMainWindow):
        
         if self.ImageDifference(pastFrame=WatcherUI.pastFrame,presentFrame=WatcherUI.presentFrame) > WatcherUI.pixelDifference and WatcherUI.timeCheck !=  datetime.now().strftime('%Ss')  :
             timeStamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S') 
-            cv2.imwrite(timeStamp + '.jpg' , img) 
-            self.listWidgetLogs.addItem('Motion Detected at ' + timeStamp  )
-            self.firebase.updateLog()
             self.logCount += 1
             self.logsCount.display(self.logCount)
+            self.listWidgetLogs.addItem('Motion Detected at ' + timeStamp  )
+            cv2.imwrite(timeStamp + '.jpg' , img) 
+            self.firebase.updateLog()
+            self.firebase.sendNotification()
+           
 
         WatcherUI.timeCheck = datetime.now().strftime('%Ss')    
         WatcherUI.pastFrame , WatcherUI.presentFrame  = WatcherUI.presentFrame , erosion
