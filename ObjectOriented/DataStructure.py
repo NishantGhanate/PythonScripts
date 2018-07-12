@@ -46,7 +46,7 @@ class Slink:
 
 class Stack:
     def __init__(self):
-        self.stack = []
+        self.stack = [10]
     
     def push(self,dataValue):
         self.stack.append(dataValue)

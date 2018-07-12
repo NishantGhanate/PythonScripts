@@ -3,7 +3,7 @@ import os
 import cv2
 from datetime import datetime , timedelta
 import numpy as np
-
+import pandas as pd
 import firebase_admin
 from firebase_admin import credentials , db , firestore , storage , messaging  
 
@@ -21,27 +21,32 @@ class FireBase():
         'databaseURL': 'https://pythonfirebase-449e8.firebaseio.com',
         'storageBucket': 'gs://pythonfirebase-449e8.appspot.com'
         })
+
       
     def updateLog(self):   
-        ref = db.reference('users/WMzLqZFN00NxwYllD9oKSMqiDuv1')
-        timeStamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S')
+        ref = db.reference('users/WMzLqZFN00NxwYllD9oKSMqiDuv1/motionLogs')
+        timestamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S')
         # print (ref.get() )
-        ref.push(timeStamp)
+        ref.push(timestamp)
 
         # db = firestore.client()
-        # doc_ref = db.collection(u'users').document(u'WMzLqZFN00NxwYllD9oKSMqiDuv1')
+        # doc_ref = db.collection(u'users').document(u'WMzLqZFN00NxwYllD9oKSMqiDuv1').collection(u'data').document(u'motionLogs')
         
         # data = {
-        #     timeStamp: {
-        #     u'a': 5,
-        #     u'b': True
-        #     }
+        #     'time': timestamp
+          
         # }
-        # doc_ref.set(data)
+
+        # sata = {
+        #     timestamp :data   
+        # }
+
+        # doc_ref.set(sata)
 
         # bucket = storage.bucket()
 
     def sendNotification(self):
+        fcmRef = db.reference('users/WMzLqZFN00NxwYllD9oKSMqiDuv1/fcmToken')
         # This registration token comes from the client FCM SDKs.
         registration_token = 'eQ5MSA8MCIk:APA91bGQ8ipstUdn_d7vvOv85PgNxkD3NKr-Srrjyd5j207h_2RSvXlb0nSf-pj6F8F1vIHhjobqlX4TYI-RB9qfHt8O1GTqp5AZ7kb0W-8i3zNBJMljA1f2pnV2ALxVJ5R6iifGx05lDMay9SKdVKzNblhsNAdIEw'
         # See documentation on defining a message payload.
@@ -57,12 +62,13 @@ class FireBase():
             token=registration_token,
         )
 
-
         # Send a message to the device corresponding to the provided
         response = messaging.send(message)
         print('Successfully sent message:', response)
 
-
+    def saveImage(self,image):
+        images = db.reference('users/WMzLqZFN00NxwYllD9oKSMqiDuv1/images')
+        images.push(image)
 
 class WatcherUI(QtWidgets.QMainWindow):
 
@@ -111,14 +117,19 @@ class WatcherUI(QtWidgets.QMainWindow):
         ret,thresh = cv2.threshold(erosion,127,255,0)
         im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
        
+        scriptDir = os.path.dirname(os.path.realpath(__file__))
         if self.ImageDifference(pastFrame=WatcherUI.pastFrame,presentFrame=WatcherUI.presentFrame) > WatcherUI.pixelDifference and WatcherUI.timeCheck !=  datetime.now().strftime('%Ss')  :
             timeStamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S') 
             self.logCount += 1
             self.logsCount.display(self.logCount)
             self.listWidgetLogs.addItem('Motion Detected at ' + timeStamp  )
-            cv2.imwrite(timeStamp + '.jpg' , img) 
+            
+            cv2.imwrite( scriptDir + os.path.sep +timeStamp + '.jpg' , img) 
             self.firebase.updateLog()
             self.firebase.sendNotification()
+            # out = bytearray(img)
+
+            # self.firebase.saveImage(out)
            
 
         WatcherUI.timeCheck = datetime.now().strftime('%Ss')    
@@ -161,6 +172,7 @@ class WatcherUI(QtWidgets.QMainWindow):
         self.stopButton.setEnabled(False)
 
     def save_logs_button(self):
+        self.firebase.updateLog()
         scriptDir = os.path.dirname(os.path.realpath(__file__))
         file = open(scriptDir + os.path.sep +'Watcherlogs.txt','a+')
         file.write('This is a test') 
