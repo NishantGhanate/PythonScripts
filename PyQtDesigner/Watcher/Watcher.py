@@ -1,6 +1,7 @@
 import sys
 import os 
 import cv2
+import base64
 from datetime import datetime , timedelta
 import numpy as np
 import pandas as pd
@@ -23,47 +24,43 @@ class FireBase():
         })
 
       
-    def updateLog(self):   
+    def updateLog(self,timestampDay):   
         ref = db.reference('users/WMzLqZFN00NxwYllD9oKSMqiDuv1/motionLogs')
-        timestamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S')
+        ref.push(timestampDay)
         # print (ref.get() )
-        ref.push(timestamp)
-
         # db = firestore.client()
         # doc_ref = db.collection(u'users').document(u'WMzLqZFN00NxwYllD9oKSMqiDuv1').collection(u'data').document(u'motionLogs')
-        
         # data = {
-        #     'time': timestamp
-          
+        #     'time': timestamp   
         # }
-
         # sata = {
         #     timestamp :data   
         # }
-
         # doc_ref.set(sata)
-
         # bucket = storage.bucket()
 
     def sendNotification(self):
         fcmRef = db.reference('users/WMzLqZFN00NxwYllD9oKSMqiDuv1/fcmToken')
+        fcmRef = fcmRef.get()
+        # print(fcmRef)
+
         # This registration token comes from the client FCM SDKs.
-        registration_token = 'eQ5MSA8MCIk:APA91bGQ8ipstUdn_d7vvOv85PgNxkD3NKr-Srrjyd5j207h_2RSvXlb0nSf-pj6F8F1vIHhjobqlX4TYI-RB9qfHt8O1GTqp5AZ7kb0W-8i3zNBJMljA1f2pnV2ALxVJ5R6iifGx05lDMay9SKdVKzNblhsNAdIEw'
-        # See documentation on defining a message payload.
-        message = messaging.Message( 
-            notification= messaging.Notification(
-                title='Watcher Detected motion ',
-                body='Action Required ',
-                ),
-            android=messaging.AndroidConfig(
-                ttl=timedelta(seconds=3600),
-                priority='normal',
-            ),     
-            token=registration_token,
-        )
+        # registration_token = fcmRef
+        # # See documentation on defining a message payload.
+        # message = messaging.Message( 
+        #     notification= messaging.Notification(
+        #         title='Watcher Detected motion ',
+        #         body='Action Required ',
+        #         ),
+        #     android=messaging.AndroidConfig(
+        #         ttl=timedelta(seconds=3600),
+        #         priority='normal',
+        #     ),     
+        #     token=registration_token,
+        # )
 
         # Send a message to the device corresponding to the provided
-        response = messaging.send(message)
+        # response = messaging.send(message)
         print('Successfully sent message:', response)
 
     def saveImage(self,image):
@@ -120,16 +117,18 @@ class WatcherUI(QtWidgets.QMainWindow):
         scriptDir = os.path.dirname(os.path.realpath(__file__))
         if self.ImageDifference(pastFrame=WatcherUI.pastFrame,presentFrame=WatcherUI.presentFrame) > WatcherUI.pixelDifference and WatcherUI.timeCheck !=  datetime.now().strftime('%Ss')  :
             timeStamp = datetime.now().strftime('%Y-%m-%d %H.%M.%S') 
+            timestampDay =  datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
             self.logCount += 1
             self.logsCount.display(self.logCount)
-            self.listWidgetLogs.addItem('Motion Detected at ' + timeStamp  )
+            self.listWidgetLogs.addItem( timestampDay  )
             
-            cv2.imwrite( scriptDir + os.path.sep +timeStamp + '.jpg' , img) 
-            self.firebase.updateLog()
-            self.firebase.sendNotification()
-            # out = bytearray(img)
-
-            # self.firebase.saveImage(out)
+            # cv2.imwrite( scriptDir + os.path.sep + timestampDay + '.jpg' , img) 
+            # retval, buffer = cv2.imencode('.jpg', img)
+            # jpg_as_text = base64.b64encode(buffer)
+            # self.firebase.saveImage(jpg_as_text)
+            # self.firebase.updateLog(timestampDay)
+            # self.firebase.sendNotification()
+           
            
 
         WatcherUI.timeCheck = datetime.now().strftime('%Ss')    
@@ -151,7 +150,8 @@ class WatcherUI(QtWidgets.QMainWindow):
     def update_frame(self):
         ret,self.image = self.cap.read()
         timeStamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        cv2.putText(self.image,timeStamp,(350,450), WatcherUI.font, 0.7,(255,255,255),2,cv2.LINE_AA)
+        timestampDay =  datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
+        cv2.putText(self.image,timestampDay,(230,450), WatcherUI.font, 0.7,(255,255,255),2,cv2.LINE_AA)
         self.motionCapture(self.image)
         self.displayImage(self.image,1)
 
@@ -172,11 +172,11 @@ class WatcherUI(QtWidgets.QMainWindow):
         self.stopButton.setEnabled(False)
 
     def save_logs_button(self):
-        self.firebase.updateLog()
         scriptDir = os.path.dirname(os.path.realpath(__file__))
         file = open(scriptDir + os.path.sep +'Watcherlogs.txt','a+')
         file.write('This is a test') 
         file.close()
+        self.firebase.sendNotification()
         print('Logs saved Sucessfully')
 
 
