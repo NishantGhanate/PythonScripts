@@ -28,6 +28,11 @@ QWidget#centralwidget
 	background-color:rgb(33,33,33,0.5);
 }
 
+QLabel#labelUid
+{
+	color:rgb(224, 224, 224);
+}
+
 QLabel#labelMotionLogs
 {
 	color:rgb(224, 224, 224);
@@ -41,13 +46,12 @@ QLabel#labelWebTitle
 QPushButton#startButton
 {
 font-size: 16px;
+
 background-color: rgb(52, 140, 11);
 border-radius: 25px;
 padding: 4px;	
 border-style: inset;
 border-width:1.2px;
-
-	
  }
 
 QPushButton#startButton:hover:pressed 
@@ -62,23 +66,19 @@ border-width:1.2px;
 QPushButton#stopButton
 {
 font-size: 16px;
+
 background-color: rgb(229, 27, 27);
 border-radius: 25px;
 padding: 4px;	
 border-style: inset;
 border-width:1.2px;
-
-	
-	
  }
 
 QPushButton#stopButton:hover:pressed 
 {
-	
+color:rgb(224, 224, 224);	
 border-style: outset;
 border-width:1.2px;
-
-	
  }
 
 QPushButton#saveLogsButton[flat=&quot;false&quot;]
@@ -89,18 +89,13 @@ border-radius: 25px;
 padding: 4px;	
 border-style: inset;
 border-width:1.2px;
-
-
 }
 
 
 QPushButton#saveLogsButton:hover:pressed 
 { 
-
 border-style: outset;
 border-width:1.2px;
-
- 
 }
 
 QLCDNumber#logsCount
@@ -120,10 +115,10 @@ color:rgb(220, 0, 0);
    <widget class="QListWidget" name="listWidgetLogs">
     <property name="geometry">
      <rect>
-      <x>1000</x>
-      <y>70</y>
+      <x>960</x>
+      <y>260</y>
       <width>271</width>
-      <height>480</height>
+      <height>241</height>
      </rect>
     </property>
     <property name="font">
@@ -136,10 +131,10 @@ color:rgb(220, 0, 0);
    <widget class="QLCDNumber" name="logsCount">
     <property name="geometry">
      <rect>
-      <x>1130</x>
-      <y>590</y>
+      <x>1090</x>
+      <y>520</y>
       <width>141</width>
-      <height>55</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -177,13 +172,13 @@ color:rgb(220, 0, 0);
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="saveLogsButton">
+   <widget class="QPushButton" name="buttonSaveLogs">
     <property name="geometry">
      <rect>
-      <x>1000</x>
-      <y>590</y>
+      <x>960</x>
+      <y>520</y>
       <width>110</width>
-      <height>55</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -208,13 +203,13 @@ color:rgb(220, 0, 0);
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="startButton">
+   <widget class="QPushButton" name="buttonStart">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>590</y>
+      <y>600</y>
       <width>110</width>
-      <height>55</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -230,13 +225,13 @@ color:rgb(220, 0, 0);
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="stopButton">
+   <widget class="QPushButton" name="buttonStop">
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>590</y>
-      <width>110</width>
-      <height>55</height>
+      <y>600</y>
+      <width>111</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -246,7 +241,7 @@ color:rgb(220, 0, 0);
    <widget class="QLabel" name="labelWebTitle">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>30</x>
       <y>30</y>
       <width>171</width>
       <height>41</height>
@@ -254,31 +249,77 @@ color:rgb(220, 0, 0);
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
-      <pointsize>16</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Webcamera Feed </string>
+     <string>Webcamera Feed :</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelMotionLogs">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>30</y>
+      <x>970</x>
+      <y>220</y>
       <width>121</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
-      <pointsize>16</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Motion Logs</string>
+     <string>Motion Logs :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>120</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelUid">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>80</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Please enter user id :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSaveUid">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>170</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
     </property>
    </widget>
   </widget>
