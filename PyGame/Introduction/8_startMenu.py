@@ -20,10 +20,12 @@ display_height = 600
 car_width = 64
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
-pygame.display.set_caption('A bit Racey')
+pygame.display.set_caption('Nutshell')
 clock = pygame.time.Clock()
 
-carImg = pygame.image.load(scriptDir + os.path.sep + 'car.png')
+carImg = pygame.image.load(scriptDir + os.path.sep + 'mu.png')
+# gameIcon = pygame.image.load(scriptDir + os.path.sep + 'car.png')
+# pygame.display.set_icon(gameIcon)
 
 block_color = (53,115,255)
 
@@ -36,6 +38,12 @@ def things_dodged(count):
 def things(thingx, thingy, thingw, thingh, color):
     pygame.draw.rect(gameDisplay, color, [thingx, thingy, thingw, thingh])
 
+    font = pygame.font.SysFont(None, 25)
+    textSurface = font.render(" KT " , True, white)
+    TextRect = textSurface.get_rect()
+    TextRect.center = ((thingx + thingw /2),(thingy + thingh /2))
+    gameDisplay.blit(textSurface,TextRect)
+
 
 def car(x,y):
     gameDisplay.blit(carImg,(x,y))
@@ -45,40 +53,40 @@ def text_objects(text, font):
     return textSurface, textSurface.get_rect()
 
 def message_display(text):
-    largeText = pygame.font.Font('freesansbold.ttf',115)
+    largeText = pygame.font.Font('freesansbold.ttf',50)
     TextSurf, TextRect = text_objects(text, largeText)
     TextRect.center = ((display_width/2),(display_height/2))
     gameDisplay.blit(TextSurf, TextRect)
 
     pygame.display.update()
 
-    time.sleep(2)
+    time.sleep(5)
 
     game_loop()
 
 def crash():
-    message_display('You Crashed !')
+    message_display('You get a drop !')
 
 
-def button(msg,x,y,w,h,ic,ac,action = None):
+def button(msg,x,y,w,h,ic,ac,action):
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
     if x+w > mouse[0] > x and y+h > mouse[1] > y:
         pygame.draw.rect(gameDisplay, ac,(x,y,w,h))
-        if click[0] == 1 and action ! = None:
-
-            game_loop()
+        if click[0] == 1 and action != None:
+            action()
     else:
         pygame.draw.rect(gameDisplay, ic,(x,y,w,h))
-        if click[0] == 1:
-            pygame.quit()
-            quit()
+        
 
     smallText = pygame.font.Font("freesansbold.ttf",20)
     textSurf, textRect = text_objects(msg, smallText)
     textRect.center = ( (x+(w/2)), (y+(h/2)) )
     gameDisplay.blit(textSurf, textRect)
 
+def quitGame():
+    pygame.quit()
+    quit()
 
 def game_intro():
 
@@ -93,11 +101,11 @@ def game_intro():
                 
         gameDisplay.fill(white)
         largeText = pygame.font.Font('freesansbold.ttf',115)
-        TextSurf, TextRect = text_objects("A bit Racey", largeText)
+        TextSurf, TextRect = text_objects("Nutshell", largeText)
         TextRect.center = ((display_width/2),(display_height/2))
         gameDisplay.blit(TextSurf, TextRect)
-        button("Go!",150,450,100,50,green,bright_green,"play")
-        button("quit",550,450,100,50,red,bright_red, "quit")
+        button("Go!",150,450,100,50,green,bright_green,game_loop)
+        button("quit",550,450,100,50,red,bright_red, quitGame)
         mouse = pygame.mouse.get_pos()
             
         # pygame.draw.rect(gameDisplay, red,(550,450,100,50))
