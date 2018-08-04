@@ -1,0 +1,9 @@
+- pip install django
+
+- django-admin startproject MyDjangoApp
+
+- cd ./MyDjangoApp 
+
+- python manage.py runserver
+
+-  http://127.0.0.1:8000/
