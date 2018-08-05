@@ -1,9 +1,45 @@
-- pip install django
+1 - pip install django
 
-- django-admin startproject MyDjangoApp
+2 - django-admin startproject MyDjangoApp
 
-- cd ./MyDjangoApp 
+3 - cd ./MyDjangoApp 
 
-- python manage.py runserver
+4 - python manage.py runserver
+	
+5 -  http://127.0.0.1:8000/
 
--  http://127.0.0.1:8000/
+6 - ctrl + break
+	[ Stop the server ]
+
+7 - python manage.py startapp music
+	[ This will create db.slite file and music dir in cd ./MyDjangoApp  ]
+
+8 - create urls.py in music folder
+	[ 	
+		from django.urls import path
+		#from django.conf.urls import url 
+	  	from . import view   # . means cwd 	
+		urlpatterns = [path('', views.index, name='index')]	# views.function name 		
+	]
+
+9 - Goto main urls.py 
+	[
+		from django.urls import path,include
+		urlpatterns = [
+    		path('admin/', admin.site.urls),
+    		path('music/', include('music.urls')),
+		]
+			
+	]
+
+10 - Goto music/views.py 
+	[
+		from django.http import HttpResponse
+		
+		def index(request):
+			return HttpResponse("<h1> this is music homepage")
+	]
+11 - in Django/MyDjangoApp 
+	[
+		python manage.py migrate 
+	]
