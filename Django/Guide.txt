@@ -43,3 +43,75 @@
 	[
 		python manage.py migrate 
 	]
+
+12 - open music/models 
+	[
+		# Create your models here.
+		class Album(models.Model):
+    			artist = models.CharField(max_length=191)
+    			album_title = models.CharField(max_length=191)
+    			genre = models.CharField(max_length=85)
+    			album_logo = models.CharField(max_length=1000)
+
+		class Song(models.Model):
+    			album = models.ForeignKey(Album, on_delete = models.CASCADE)
+    			file_type = models.CharField(max_length = 10 )
+    			song_title = models.CharField(max_length = 191 )
+	]
+
+13 - goto settings.py 
+	[add 
+		INSTALLED_APPS = [
+    		'music.apps.MusicConfig',]
+	]
+
+14 - in cmd [ 
+	python manage.py makemigrations music
+	Migrations for 'music':
+  	music\migrations\0001_initial.py
+    	- Create model Album
+    	- Create model Song
+	]
+
+
+15 - To view db of music [ python manage.py sqlmigrate music 001 ] 
+
+
+16 - in cmd 
+	[
+		python manage.py shell
+	
+		>> from music.models import Album , Song
+		>> Album.objects.all()
+		>> a = Album(artist = "Taylor Swfit" , album_title = "Red" , genre ="Country", album_logo = 			"https://avatars1.githubusercontent.com/u/26281560?			s=400&u=80d61bef56204bb81e5cd1affa52ad2fce1ed1d2&v=4")
+		
+		>> a.save()
+
+		>>> b = Album()
+		>>> b.artist = "Myth"
+		>>> b.album_title = "High School"
+		>>> b.genre = "Punk"
+		>>> b.album_logo =                   "https://avatars1.githubusercontent.com/u/26281560s=400&u=80d61bef56204bb81e5cd1affa52ad2fce1ed1d2&v=4 "
+		>>> b.album_logo
+		>>> b.save()
+
+
+	]
+
+17 - restart shell 
+
+	[
+		>>> from music.models import Album , Song
+		>>> Album.objects.all()
+		<QuerySet [<Album: Red - Taylor Swfit>, <Album: High School - Myth>]>
+
+		>>> Album.objects.filter(id=1)
+		<QuerySet [<Album: Red - Taylor Swfit>]>
+
+		>>> Album.objects.filter(id=2)
+		<QuerySet [<Album: High School - Myth>]>
+
+		>>> Album.objects.filter(artist__startswith ='Taylor')
+		<QuerySet [<Album: Red - Taylor Swfit>]>
+
+	] 
