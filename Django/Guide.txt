@@ -65,10 +65,11 @@
     		'music.apps.MusicConfig',]
 	]
 
-14 - in cmd [ 
-	python manage.py makemigrations music
-	Migrations for 'music':
-  	music\migrations\0001_initial.py
+14 - in cmd 
+	[ 
+		python manage.py makemigrations music
+		Migrations for 'music':
+		music\migrations\0001_initial.py
     	- Create model Album
     	- Create model Song
 	]
@@ -80,26 +81,22 @@
 16 - in cmd 
 	[
 		python manage.py shell
-	
+
 		>> from music.models import Album , Song
 		>> Album.objects.all()
-		>> a = Album(artist = "Taylor Swfit" , album_title = "Red" , genre ="Country", album_logo = 			"https://avatars1.githubusercontent.com/u/26281560?			s=400&u=80d61bef56204bb81e5cd1affa52ad2fce1ed1d2&v=4")
-		
+		>> a = Album(artist = "Taylor Swfit" , album_title = "Red" , genre ="Country", album_logo ="https://avatars1.githubusercontent.com/u/26281560?			s=400&u=80d61bef56204bb81e5cd1affa52ad2fce1ed1d2&v=4")
 		>> a.save()
 
 		>>> b = Album()
 		>>> b.artist = "Myth"
 		>>> b.album_title = "High School"
 		>>> b.genre = "Punk"
-		>>> b.album_logo =                   "https://avatars1.githubusercontent.com/u/26281560s=400&u=80d61bef56204bb81e5cd1affa52ad2fce1ed1d2&v=4 "
+		>>> b.album_logo = "https://avatars1.githubusercontent.com/u/26281560s=400&u=80d61bef56204bb81e5cd1affa52ad2fce1ed1d2&v=4 "
 		>>> b.album_logo
 		>>> b.save()
-
-
 	]
 
 17 - restart shell 
-
 	[
 		>>> from music.models import Album , Song
 		>>> Album.objects.all()
@@ -113,5 +110,159 @@
 
 		>>> Album.objects.filter(artist__startswith ='Taylor')
 		<QuerySet [<Album: Red - Taylor Swfit>]>
+	]
 
-	] 
+18 - in cmd to create admin 
+	[
+		python manage.py createsuperuser	
+		
+		create user name password and email 
+	]
+	
+19 - to see admin panel 
+	[
+		python manage.py runserver	
+		http://127.0.0.1:8000/admin/login/		
+	]
+	
+20 - view models created in admin panel 
+	[
+		music/admin.py
+			from .models import Album
+			admin.site.register(Album)
+		save , refresh browser
+		
+	]
+
+21 - create new view 
+	[
+		
+		open music/urls add 
+		
+		app_name = 'music'
+		- path('<int:album_id>', views.detail,name='detail')
+		
+		open music/views add 
+		- def detail(request , album_id):
+			return HttpResponse("<h1> Detailsfor Alum id : " + str(album_id))
+
+	]
+	
+21 - in music/views 
+	[
+		from .models import Album
+		
+		def index(request):
+			all_albums = Album.objects.all()
+			html = ''
+			for album in all_albums:
+				url = "/music/" + str(album.id) + "/"
+				html += '<ahref = ' + url + ' > ' + album.album_title + '</a><br>'
+		return HttpResponse(html)	
+		
+	]
+	
+22 - Template music/views
+	[
+		from django.template import loader
+		
+		create folder as music/templates/music/index.html
+			<ul>
+				<li> <a href = "#"> </a></li>
+			</ul>
+			
+		music/views 	
+		def index(request):
+			all_albums = Album.objects.all()
+			template = loader.get_template('music/index.html')
+			context = {
+			'all_albums' : all_albums,
+			}
+		return HttpResponse(template.render(context , request))	
+		
+		open index.html  
+			{% if all_albums %}
+				<ul>
+				{% for album in all_albums %}
+				<li> <a href = "{% url 'music:detail' album.id %}"> {{ album.album_title }} </a></li>
+				{% endfor %} 
+				</ul>
+			{% else %}
+				<h3>Currenlly there are no album </h3>
+			{% endif %}
+	]
+	
+23 -  template shorcut - music/views
+	[
+		from django.shortcuts import render
+		
+		def index(request):
+			all_albums = Album.objects.all()
+			context = {'all_albums' : all_albums}
+			return render(request,'music/index.html',context)
+	]
+	
+24 - 404 on invalid id request music/views
+	[
+		from django.http import Http404
+		
+		def detail(request , album_id):
+		try:
+			album = Album.objects.get(pk=album_id)
+			context = {'album' : album }
+		except Album.DoesNotExist:
+			raise Http404("Album does not exist ")
+		return render(request,'music/detail.html',context)
+		
+		in music/templates/music/detail.html
+		
+		{{ album }}
+	]
+	
+
+25 - show cover of album 
+	[
+		music/templates/music/detail.html 
+		<img src = " {{ album.album_logo }} ">
+		<h1> {{ album.album_title }} </h1>
+		<h3>{{ album.artist }}</h3>
+		<ul>
+			{% for song in album.song_set.all %}
+			<li>
+				{{ song.song_title}} - {{ song.file_type}}
+			</li>
+			{% endfor %}
+		</ul>
+	]
+
+26 - Add new songs 
+	[
+		music/admin 
+			from .models import Album , Song
+			admin.site.register(Album)
+			admin.site.register(Song)
+		
+		music/model
+		class Song:
+			def __str__(self):
+				return self.song_title 
+		
+		cmd : python manage.py shell
+			>>> from music.models import Album,Song
+			>>> album1 = Album.objects.get(pk=1)
+			>>> album1.artist
+			'Taylor Swfit'
+			>>> song = Song()
+			>>> song.album = album1
+			>>> song.file_type = 'mp3'
+			>>> song.song_title = 'I love my girlfriend'
+			>>> song.save()
+		
+		goto adminPanel and check
+		
+		# song has pk from album 
+		>>> album1.song_set.create(song_title ="I love wadapav"  , file_type="mp3")
+			
+		# return no.of song in that album
+		>> album1.song_set.count()
+	]
