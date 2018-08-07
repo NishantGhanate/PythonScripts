@@ -26,6 +26,7 @@ class FireBase():
     def validateUid(self,uid):
         try:
             ref = db.reference('users/'+ uid)
+            print(ref.get())
             if(ref.get() != None):
                 self.uid = uid
                 return ref.get()        
