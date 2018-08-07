@@ -1,4 +1,5 @@
 from django.db import models
+# from django.core.
 
 # Create your models here.
 class Album(models.Model):

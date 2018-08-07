@@ -266,3 +266,12 @@
 		# return no.of song in that album
 		>> album1.song_set.count()
 	]
+	
+27 - generic view 
+	[
+		#views.function name
+		#views.classname.as_view
+		path('', views.IndexView.as_view(), name='index'),
+		# path('<album_id>', views.DetailView.as_view(),name='detail'),
+		url(r'^(?P<pk>[0-9]+)/$' ,views.DetailView.as_view(),name='detail' )
+	]

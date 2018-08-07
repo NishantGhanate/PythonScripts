@@ -6,7 +6,9 @@ app_name = 'music'
 
 urlpatterns = [
     #views.function name
-    path('', views.index, name='index'),
-    path('<int:album_id>', views.detail,name='detail'),
-    path('<int:album_id>', views.favourite,name='favourite')
+    #views.classname.as_view
+    path('', views.IndexView.as_view(), name='index'),
+    # path('<int:album.id>', views.DetailView.as_view(),name='detail'),
+    url(r'^(?P<pk>[0-9]+)/$' ,views.DetailView.as_view(),name='detail' )
+    
 ]
