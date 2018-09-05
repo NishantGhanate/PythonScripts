@@ -1,0 +1,69 @@
+{% for album in all_albums %}
+    <div class="CardAlbum">
+        <a id="album_title" href = "{% url 'music:detail' album.id %}">
+        <img id="album_logo" src="{{ album.album_logo }}" alt="Avatar" >
+        </a>
+        <div class="AlbumContainer">
+            <h4><b>{{ album.album_title }}</b></h4> 
+            <p>{{album.artist}}</p> 
+        </div>
+    </div> 
+    <br>
+
+{% endfor %} 
+
+
+
+
+{% extends 'music/base.html' %}
+{% block title %} detail {% endblock%}
+{% block body%}
+
+<img src = " {{ album.album_logo }} ">
+<h1> {{ album.album_title }} </h1>
+<h3>{{ album.artist }}</h3>
+
+<hr>   <hr>
+
+{% if error_message %}
+    <p><Strong> {{ error_message }}</Strong></p>
+
+
+
+{% endif %}
+
+{% for song in album.song_set.all %}
+
+<audio controls>
+    <source src="" type="audio/ogg">
+    <source src="{{link.url}}/{{song.file_type}}" type="audio/mpeg">
+    <button> "{{song.file_type}}"</button>
+  Your browser does not support the audio element.
+</audio>
+
+{{song.song_title}}
+
+{% endfor %}
+
+
+{% endblock%} 
+
+
+<!-- <input type="radio" id="song{{ forloop.counter }}" name="song" value="{{ song.id }}">
+<label for="song{{ forloop.counter  }}">
+    {{ song.song_title }}
+    {% if song.is_favourite %}
+        <img src ="http://i.imgur.com/b9b13Rd.png"/>
+    {% endif %}
+</label> <br> -->
+
+
+
+<audio controls>
+    <source src="{{link.url}}/media/audio/NishantGhanate/Song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element (). 
+</audio>
+  
+<hr>
+{{link.url}} 
+<hr>
