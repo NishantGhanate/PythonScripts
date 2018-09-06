@@ -10,26 +10,34 @@
 
 
 <div id ="containerSong">
-    <div id="SongHeading">
-        <img  class="detail_album_logo"  src = " {{ album.album_logo }} "><br>
-        <h1> Album title : {{ album.album_title }} </h1>
-        <h3> Artist name : {{ album.artist }}</h3>
-    </div>
-    <div id="SongList">
-        {% for song in album.song_set.all %}
-        <div>
-            {{song.song_title}}
+    <img  class="detail_album_logo"  src = " {{ album.album_logo }} "><br>
+    <div class="musicPlayerDiv">
+        <div id="SongHeading">
+            <h3> Album title : {{ album.album_title }} </h3>
+            <h4> Artist name : {{ album.artist }}</h4>
         </div>
-        {% endfor %}
+        <audio controls id="audioControler">
+        <!-- <source src="{{link.url}}/{{song.file_type}}" type="audio/mpeg"> -->
+            Your browser does not support the audio element.
+        </audio>
     </div>
 </div>
 
-<div id="Que">
+<div id="SongList">
+    {% for song in album.song_set.all %}
     <div>
-
+        <p class="">{{song.song_title}} </p>
     </div>
+    {% endfor %}
 </div>
 
+
+
+<script type="text/javascript"> 
+    var a = "{{album.album_title}}";
+    a = "{{link.url}}";
+    console.log(a);
+ </script>
 
 
 {% endblock%} 
