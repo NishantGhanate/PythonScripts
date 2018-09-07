@@ -13,30 +13,37 @@
     <img  class="detail_album_logo"  src = " {{ album.album_logo }} "><br>
     <div class="musicPlayerDiv">
         <div id="SongHeading">
-            <h3> Album title : {{ album.album_title }} </h3>
+            <h4 id="songName">Song name : </h4>
+            <h4> Album title : {{ album.album_title }} </h4>
             <h4> Artist name : {{ album.artist }}</h4>
         </div>
         <audio controls id="audioControler">
-        <!-- <source src="{{link.url}}/{{song.file_type}}" type="audio/mpeg"> -->
+        <source id ="audioPlayer" src="{{link.url}}/media/audio/song.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
 </div>
 
-<div id="SongList">
+<div class="songContainer">
+    <div class="songList">
     {% for song in album.song_set.all %}
-    <div>
-        <p class="">{{song.song_title}} </p>
-    </div>
+        <p class="song_title" onclick="setTitle('{{song.song_title}}','{{song.file_type}} ')">{{song.song_title}} </p>
     {% endfor %}
+    </div>
 </div>
-
 
 
 <script type="text/javascript"> 
     var a = "{{album.album_title}}";
-    a = "{{link.url}}";
-    console.log(a);
+    songName = document.getElementById("songName");
+    audioPLayer = document.getElementById("audioPlayer");
+    function setTitle(title,titleSrc){
+        console.log(titleSrc);
+        songName.innerHTML = "Song name : "+title;
+        audioPLayer.src = "{{link.url}}/"+titleSrc;
+    }
+   
+    
  </script>
 
 
