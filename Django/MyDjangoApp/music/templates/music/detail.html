@@ -10,6 +10,7 @@
 
 
 <div id ="containerSong">
+    <canvas id="canvas"></canvas>
     <img  class="detail_album_logo"  src = " {{ album.album_logo }} "><br>
     <div class="musicPlayerDiv">
         <div id="SongHeading">
@@ -17,8 +18,8 @@
             <h4> Album title : {{ album.album_title }} </h4>
             <h4> Artist name : {{ album.artist }}</h4>
         </div>
-        <audio controls id="audioControler">
-        <source id ="audioPlayer" src="{{link.url}}/media/audio/song.mp3" type="audio/mpeg">
+        <audio controls id="audioController">
+        <source id ="audioPlayer" src="" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
@@ -27,23 +28,81 @@
 <div class="songContainer">
     <div class="songList">
     {% for song in album.song_set.all %}
-        <p class="song_title" onclick="setTitle('{{song.song_title}}','{{song.file_type}} ')">{{song.song_title}} </p>
+        <li class="song_title" onclick="setTitle('{{song.song_title}}','{{song.file_type}} ')">{{song.song_title}} </li>
     {% endfor %}
     </div>
 </div>
 
 
+
 <script type="text/javascript"> 
     var a = "{{album.album_title}}";
-    songName = document.getElementById("songName");
-    audioPLayer = document.getElementById("audioPlayer");
+    var songName = document.getElementById("songName");
+    var audioPLayer = document.getElementById("audioPlayer");
+    var audioController = document.getElementById("audioController");
+    var canvas = document.getElementById("canvas");
+    var change = twoPi/objectsCount;
+    var twoPi = 2*Math.PI;
+    var objectsCount = 12;
+    var radius = 150;
+
+    function visulation(audio)
+    {
+        var context = new AudioContext();
+        var src = context.createMediaElementSource(audio);
+        var analyser = context.createAnalyser();
+        console.log(src);
+        src.connect(analyser);
+        // connect this to hear audio
+        analyser.connect(context.destination);
+        var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+        var ctx = canvas.getContext("2d");
+        analyser.fftSize = 256;
+
+        var bufferLength = analyser.frequencyBinCount;
+        console.log(bufferLength);
+        var dataArray = new Uint8Array(bufferLength);
+        canvas.width = 150;
+        canvas.height = 150;
+        var WIDTH = canvas.width;
+        var HEIGHT = canvas.height;
+
+        var barWidth = (WIDTH / bufferLength) * 2.5;
+        var barHeight;
+        var x = 0;
+        var y = 0;
+        // console.log(frequencyData);
+    function renderFrame() {
+      requestAnimationFrame(renderFrame);
+      x = 0;
+      y = 0;
+      analyser.getByteFrequencyData(dataArray);
+
+      ctx.fillStyle = "#000";
+      ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+      for (var i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i];
+        var r = barHeight + (25 * (i/bufferLength));
+        var g = 256 * (i%bufferLength);
+        var b = 50 ;
+        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+        ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+        x += barWidth + 1;
+      }
+    } 
+    audio.play();
+    renderFrame();
+    }
     function setTitle(title,titleSrc){
         console.log(titleSrc);
         songName.innerHTML = "Song name : "+title;
         audioPLayer.src = "{{link.url}}/"+titleSrc;
+        audioController.load();
+        // audioController.play();
+        visulation(audioController);      
     }
-   
-    
+
  </script>
 
 

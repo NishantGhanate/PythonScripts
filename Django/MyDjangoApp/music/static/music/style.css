@@ -99,9 +99,22 @@
     margin-top: 35%;
 }
 
-#audioControler{
+#audioController{
     width: 80%;
     margin-left: 12%;
+}
+
+#canvas{
+    position:absolute;
+    top: 24.2%;
+    left:72.5%;
+    width:100px;
+    height:100px;
+    /* border-radius: 50%;  */
+    background:rgba(0,0,0,.5);
+    -webkit-transition:.5s ease all;
+    z-index:10000;
+    cursor:pointer;
 }
 
 
