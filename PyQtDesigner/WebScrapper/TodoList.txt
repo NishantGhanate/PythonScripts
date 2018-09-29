@@ -1,0 +1,10 @@
+1. Get site url
+2. Get first or all instance
+
+3. Get by element by id use #  		// driver.find_element_by_class_id('')
+4. get by element by class use . 	// driver.find_element_by_class_name('')
+5. Get by TagName 			// driver.find_element_by_tag_name('')
+6. Get by Name 				// driver.find_element_by_name('')
+7. Get by CSS selectors 		// driver.find_element_by_css_selector('p.content')
+
+8. Get by Xpath - driver.find_elements_by_xpath("//a[@href]")
