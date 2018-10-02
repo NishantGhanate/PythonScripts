@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="listWidgetMain">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -29,7 +29,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="buttonLoadUrl">
     <property name="geometry">
      <rect>
       <x>500</x>
@@ -47,7 +47,7 @@
      <string>Load url</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget_2">
+   <widget class="QListWidget" name="listWidgetLogs">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -62,7 +62,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="buttonGetSource">
     <property name="geometry">
      <rect>
       <x>500</x>
@@ -80,7 +80,7 @@
      <string>Get source</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="textEditUrl">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -95,7 +95,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_2">
+   <widget class="QTextEdit" name="textEditSource">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -110,7 +110,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="buttonClearLogs">
     <property name="geometry">
      <rect>
       <x>1190</x>
@@ -128,7 +128,7 @@
      <string>Clear logs</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="buttonSaveLogs">
     <property name="geometry">
      <rect>
       <x>810</x>

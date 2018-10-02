@@ -1,0 +1,7 @@
+https://www.reddit.com/r/ProgrammerHumor/
+
+//*[@class="y8HYJ-y_lTUHkQIc1mdCq"]//h2//text()
+
+# r = r.html.xpath('//*[@class="y8HYJ-y_lTUHkQIc1mdCq"]//h2//text()')
+
+https://devhints.io/xpath
