@@ -2,7 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets , uic
 from PyQt5.QtGui import  QIcon
 from datetime import datetime
 from requests_html import HTMLSession
-from requests.exceptions import ConnectionError
+import requests.exceptions 
 import os
 import sys
 
@@ -13,48 +13,63 @@ class Web(QtWidgets.QMainWindow):
         uic.loadUi(self.scriptDir + os.path.sep + 'WebScrapper.ui',self)
         self.setWindowIcon(QIcon(self.scriptDir + os.path.sep + 'icon.png')) 
         self.setWindowTitle('WebScrapper by [@Nishant Ghanate]') 
-        self.buttonLoadUrl.clicked.connect(self.getUrl)
-        self.buttonGetSource.clicked.connect(self.getSource)
-        self.buttonGetSource.setEnabled(False)
+        self.buttonGetInput.clicked.connect(self.getInput)
         self.buttonSaveLogs.clicked.connect(self.saveLogs)
         self.buttonClearLogs.clicked.connect(self.clearLogs)
+        self.oldUrl = "_"
     
     QtCore.pyqtSlot()
+    def getTimeStamp(self):
+        return  datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
 
-    def getUrl(self):
-        url = self.textEditUrl.toPlainText()
-        session = HTMLSession()
+    def validateUrl(self,url):
         try:
-            self.r = session.get(url)
-        except ConnectionError as e:
-            print(e)
-            sys.exit(1)
-        print(self.r.status_code)
-        if self.r.status_code ==200:
-            self.listWidgetLogs.addItem(str(self.r.status_code))
-            self.buttonGetSource.setEnabled(True)
-        else:
-            self.listWidgetLogs.addItem(str(self.r.status_code))
-            # sys.exit(1)
+            # if new url found 
+            if self.oldUrl != url:
+                self.oldUrl = url
+                session = HTMLSession()
+                self.r = session.get(url)
+                return True
+            else :
+                return False
+        except requests.exceptions.RequestException  as e:
+            self.listWidgetLogs.addItem(str(e))
+            return False
             
 
     def getSource(self):
-        src = self.textEditSource.toPlainText()
-        # print(src)
-        try:
-            r = self.r.html.xpath(src)
-            # timestampDay =  datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
-            # self.listWidgetLogs.addItem(timestampDay)
-            # print(type(r))
-            for _ in r:
-                print(_)
-                _ = str(_)
-                self.listWidgetLogs.addItem(_)
-        except:
-            self.listWidgetLogs.addItem('Something went wrong ops!')
-    
+        src = self.r.html.xpath(self.xpathSrc)
+        
+        if src :
+            timeStamp = self.getTimeStamp()
+            for s in src:
+                print(s)
+                s = str(s)
+                self.listWidgetLogs.addItem(s)
+            if self.r.html._next():
+                print(self.r.html._next())
+                url = self.validateUrl(self.r.html._next())
+                if url:
+                    if self.r.status_code == 200:
+                        self.getSource()   
+        
 
-    
+        
+    def getInput(self):
+        url = self.textEditUrl.toPlainText()
+        self.xpathSrc = self.textEditSource.toPlainText()
+        if url is None or len(url) < 5:
+            timestampDay = self.getTimeStamp()
+            self.listWidgetLogs.addItem(timestampDay)
+            self.listWidgetLogs.addItem('Url cannot be empty ¯\_(ツ)_/¯ \n')
+        elif self.xpathSrc is None:
+            self.listWidgetLogs.addItem('xpath input \_(ʘ_ʘ)_/ ? ')
+        else :
+            source = self.validateUrl(url)
+            if source:
+                self.getSource()
+            
+
     def saveLogs(self):
         timestampDay =  datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
         file = open(self.scriptDir + os.path.sep +'WebScrappingLogs_'+timestampDay+'.txt','a+')
@@ -77,3 +92,15 @@ if __name__ == "__main__":
 
 # https://www.reddit.com/r/ProgrammerHumor/
 # r = r.html.xpath('//*[@class="y8HYJ-y_lTUHkQIc1mdCq"]//h2//text()')
+
+
+        #    if self.r.html._next():
+        #             url = validateUrl(self.r.html._next())
+        #             if url:
+        #                 if self.r.status_code == 200:
+        #                     self.getSource()   
+        #             else:
+        #                 self.listWidgetLogs.addItem('Sorry we are unable to get next page')
+
+        #     else:
+        #         self.listWidgetLogs.addItem('Could not find given xpath, (•◡•) please try again diffrent')
