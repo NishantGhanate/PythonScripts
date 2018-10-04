@@ -156,7 +156,7 @@ QWidget#centralwidget
      <string>Save Logs</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="radioButtonFirst">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -192,7 +192,7 @@ QWidget#centralwidget
      <string>Stop</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_2">
+   <widget class="QRadioButton" name="radioButtonAll">
     <property name="geometry">
      <rect>
       <x>230</x>
