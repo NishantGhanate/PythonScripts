@@ -17,10 +17,10 @@ class Web(QtWidgets.QMainWindow):
         self.buttonGetInput.clicked.connect(self.getInput)
         self.buttonSaveLogs.clicked.connect(self.saveLogs)
         self.buttonClearLogs.clicked.connect(self.clearLogs)
-        # self.buttonClear.clicked.connect()
-        # self.buttonStop.clicked.connect()
-
+        self.buttonClear.clicked.connect(self.clear)
+        self.buttonStop.clicked.connect(self.stop)
         self.oldUrl = "_"
+        self.stop = False
 
     #Acttivate UI fucntions
     QtCore.pyqtSlot()
@@ -47,25 +47,28 @@ class Web(QtWidgets.QMainWindow):
             return False
             
     # This function will scrap it is also recurive if required 
-    def getSource(self):  
-        # returns list for single Xpath item 
-        src = self.r.html.xpath(self.xpathSrc)
-        # proceed further if list is not empty
-        if src :
-            timeStamp = self.getTimeStamp()
-            for s in src:
-                print(s)
-                s = str(s)
-                # List widget only supports string
-                self.listWidgetLogs.addItem(s)
-            
-            if self.r.html._next():
-                print(self.r.html._next())
-                url = self.validateUrl(self.r.html._next())
-                if url:
-                    if self.r.status_code == 200:
-                        self.getSource()   
-        
+    def getSource(self):
+        try:  
+            # returns list for single Xpath item 
+            src = self.r.html.xpath(self.xpathSrc)
+            # proceed further if list is not empty
+            if src :
+                timeStamp = self.getTimeStamp()
+                for s in src:
+                    print(s)
+                    s = str(s)
+                    # List widget only supports string
+                    self.listWidgetLogs.addItem(s)
+                if  radioButtonAll.isChecked():
+                    if self.r.html._next():
+                        print(self.r.html._next())
+                        url = self.validateUrl(self.r.html._next())
+                        if url:
+                            if self.r.status_code == 200:
+                                self.getSource()   
+        except ValueError:
+            raise InvalidSelector()
+            exit()
 
     # Get button function connection  
     def getInput(self):
@@ -75,6 +78,7 @@ class Web(QtWidgets.QMainWindow):
         if url and self.xpathSrc is not None:
             source = self.validateUrl(url)
             if source:
+                self.listWidgetMain.addItem(self.xpathSrc)
                 self.getSource()
         elif url is None or len(url) < 5:
             timestampDay = self.getTimeStamp()
@@ -94,9 +98,15 @@ class Web(QtWidgets.QMainWindow):
         file.close()
         self.listWidgetLogs.addItem('Logs saved Sucessfully')
     
-     # clear preservedLogs      
+    def stop(self):
+        self.stop = True
+
+    # clear preservedLogs      
     def clearLogs(self):
         self.listWidgetLogs.clear()
+
+    def clear(self):
+        self.listWidgetMain.clear()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

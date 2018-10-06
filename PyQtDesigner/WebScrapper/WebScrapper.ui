@@ -19,20 +19,35 @@
   <property name="styleSheet">
    <string notr="true">QMainWindow#MainWindow
 {
-	background-color:rgb(195,223,255);
+	/*background-color:rgb(195,223,255);*/
+	background-image: url('H:/Github/PythonScripts/PyQtDesigner/WebScrapper/bg.png');
+ 	background-position: center; /* Center the image */
+	 background-repeat: no-repeat;
+    background-size: cover;
+              
 	
 }
 
 
 QWidget#centralwidget
 {
+/*
+	background-image: url('H:/Github/PythonScripts/PyQtDesigner/WebScrapper/bg.png');
+	background-size: 300px 100px;
+		background-position: center; 
+	background-size: cover;
+*/
 
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;  
-	background-color:rgb(195,223,255);
-	
+}
 
+QLabel
+{	
+	color:rgb(255,255,255);
+}
+
+QRadioButton
+{
+	color:rgb(255,255,255);
 }
 
 
@@ -47,7 +62,7 @@ QWidget#centralwidget
      <rect>
       <x>30</x>
       <y>60</y>
-      <width>560</width>
+      <width>481</width>
       <height>400</height>
      </rect>
     </property>
@@ -60,9 +75,9 @@ QWidget#centralwidget
    <widget class="QListWidget" name="listWidgetLogs">
     <property name="geometry">
      <rect>
-      <x>810</x>
+      <x>860</x>
       <y>60</y>
-      <width>491</width>
+      <width>461</width>
       <height>541</height>
      </rect>
     </property>
@@ -95,7 +110,7 @@ QWidget#centralwidget
      <rect>
       <x>39</x>
       <y>490</y>
-      <width>551</width>
+      <width>471</width>
       <height>31</height>
      </rect>
     </property>
@@ -110,7 +125,7 @@ QWidget#centralwidget
      <rect>
       <x>40</x>
       <y>570</y>
-      <width>551</width>
+      <width>471</width>
       <height>31</height>
      </rect>
     </property>
@@ -123,7 +138,7 @@ QWidget#centralwidget
    <widget class="QPushButton" name="buttonClearLogs">
     <property name="geometry">
      <rect>
-      <x>930</x>
+      <x>980</x>
       <y>630</y>
       <width>90</width>
       <height>30</height>
@@ -141,7 +156,7 @@ QWidget#centralwidget
    <widget class="QPushButton" name="buttonSaveLogs">
     <property name="geometry">
      <rect>
-      <x>810</x>
+      <x>860</x>
       <y>630</y>
       <width>90</width>
       <height>30</height>
@@ -213,7 +228,7 @@ QWidget#centralwidget
    <widget class="QLabel" name="labelMain">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>170</x>
       <y>20</y>
       <width>200</width>
       <height>31</height>
@@ -243,7 +258,7 @@ QWidget#centralwidget
    <widget class="QLabel" name="labelLog">
     <property name="geometry">
      <rect>
-      <x>960</x>
+      <x>1000</x>
       <y>20</y>
       <width>200</width>
       <height>31</height>
