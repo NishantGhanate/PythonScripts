@@ -22,7 +22,7 @@
 	/*background-color:rgb(195,223,255);*/
 	background-image: url('H:/Github/PythonScripts/PyQtDesigner/WebScrapper/bg.png');
  	background-position: center; /* Center the image */
-	 background-repeat: no-repeat;
+	background-repeat: no-repeat;
     background-size: cover;
               
 	
@@ -31,12 +31,6 @@
 
 QWidget#centralwidget
 {
-/*
-	background-image: url('H:/Github/PythonScripts/PyQtDesigner/WebScrapper/bg.png');
-	background-size: 300px 100px;
-		background-position: center; 
-	background-size: cover;
-*/
 
 }
 

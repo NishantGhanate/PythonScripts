@@ -68,38 +68,48 @@ class Web(QtWidgets.QMainWindow):
                                 self.getSource()   
         except ValueError:
             raise InvalidSelector()
-            exit()
+           
 
     # Get button function connection  
     def getInput(self):
         url = self.textEditUrl.toPlainText()
         self.xpathSrc = self.textEditSource.toPlainText()
-
-        if url and self.xpathSrc is not None:
+        print(self.xpathSrc)
+        if url and self.xpathSrc.strip() :
             source = self.validateUrl(url)
             if source:
+                timestampDay = self.getTimeStamp()
+                self.listWidgetLogs.addItem(timestampDay)
                 self.listWidgetMain.addItem(self.xpathSrc)
                 self.getSource()
         elif url is None or len(url) < 5:
             timestampDay = self.getTimeStamp()
             self.listWidgetLogs.addItem(timestampDay)
-            self.listWidgetLogs.addItem('Url cannot be empty ¯\_(ツ)_/¯ \n')
-        elif self.xpathSrc is None:
-            self.listWidgetLogs.addItem('xpath input \_(ʘ_ʘ)_/ ? ')
+            self.listWidgetLogs.addItem('Url cannot be empty ¯\_(ツ)_/¯ ')
+        else :
+            timestampDay = self.getTimeStamp()
+            self.listWidgetLogs.addItem(timestampDay)
+            self.listWidgetLogs.addItem('xpath input \_(ʘ_ʘ)_/  where is it ?')
            
     # Saves logs from Preserved logs
     def saveLogs(self):
-        timestampDay =  datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
-        file = open(self.scriptDir + os.path.sep +'WebScrappingLogs_'+timestampDay+'.txt','a+')
+        timestampDay =  datetime.now().strftime("%A %d %B %Y %I %M %S%p")
+        file = open(self.scriptDir + os.path.sep +'WebScrappingLogs '+ timestampDay +'.txt','a+')
         i = 0
-        for log in self.listWidgetLogs.item(i).text():
-            file.write(log +'\n')
-            i += 1
+        logsList = []
+        itemsTextList =  [str(self.listWidgetLogs.item(i).text()) for i in range(self.listWidgetLogs.count())]
+
+        # for log in self.listWidgetLogs.item(i).text():
+        #     i = i+ 1
+        #     print(log)
+        #     file.writelines(log)
+        file.writelines(itemsTextList)
         file.close()
         self.listWidgetLogs.addItem('Logs saved Sucessfully')
     
     def stop(self):
         self.stop = True
+        # os.system("pause")
 
     # clear preservedLogs      
     def clearLogs(self):
