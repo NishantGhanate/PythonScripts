@@ -102,9 +102,9 @@ QRadioButton
    <widget class="QTextEdit" name="textEditUrl">
     <property name="geometry">
      <rect>
-      <x>39</x>
+      <x>30</x>
       <y>490</y>
-      <width>471</width>
+      <width>481</width>
       <height>31</height>
      </rect>
     </property>
@@ -117,9 +117,9 @@ QRadioButton
    <widget class="QTextEdit" name="textEditSource">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>570</y>
-      <width>471</width>
+      <width>481</width>
       <height>31</height>
      </rect>
     </property>
@@ -279,7 +279,7 @@ QRadioButton
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>470</y>
       <width>91</width>
       <height>21</height>
@@ -297,7 +297,7 @@ QRadioButton
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>540</y>
       <width>71</width>
       <height>31</height>

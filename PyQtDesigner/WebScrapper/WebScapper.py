@@ -6,7 +6,19 @@ import requests.exceptions
 import os
 import sys
 
-#Init PythonUI 
+
+
+class Guide(QtWidgets.QWidget):
+     def __init__(self):
+        super(Guide,self).__init__()
+        self.scriptDir = os.path.dirname(os.path.realpath(__file__))
+        uic.loadUi(self.scriptDir + os.path.sep + 'Guide.ui',self)
+        self.setWindowIcon(QIcon(self.scriptDir + os.path.sep + 'icon.png')) 
+        self.setWindowTitle('Guide for Webscraping') 
+
+
+
+#Init PythonUI MainWindow 
 class Web(QtWidgets.QMainWindow):
     def __init__(self):
         super(Web,self).__init__()
@@ -20,14 +32,15 @@ class Web(QtWidgets.QMainWindow):
         self.buttonClear.clicked.connect(self.clear)
         self.buttonStop.clicked.connect(self.stop)
         self.oldUrl = "_"
-        self.stop = False
+        self.Guide = Guide()
+        self.actionGuide.triggered.connect(self.guideWindow)
 
     #Acttivate UI fucntions
     QtCore.pyqtSlot()
 
     # Returns Time in e.g 1 oct 2018 formart
     def getTimeStamp(self):
-        return  datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
+        return  datetime.now().strftime("%A %d. %B %Y %I:%M:%S %p")
 
     # Validate input url and throw Expection for invalid
     def validateUrl(self,url):
@@ -59,6 +72,7 @@ class Web(QtWidgets.QMainWindow):
                     s = str(s)
                     # List widget only supports string
                     self.listWidgetLogs.addItem(s)
+                # if all pages is checked
                 if  radioButtonAll.isChecked():
                     if self.r.html._next():
                         print(self.r.html._next())
@@ -66,8 +80,8 @@ class Web(QtWidgets.QMainWindow):
                         if url:
                             if self.r.status_code == 200:
                                 self.getSource()   
-        except ValueError:
-            raise InvalidSelector()
+        except :
+            self.listWidgetLogs.addItem('Xpath exception')
            
 
     # Get button function connection  
@@ -85,31 +99,26 @@ class Web(QtWidgets.QMainWindow):
         elif url is None or len(url) < 5:
             timestampDay = self.getTimeStamp()
             self.listWidgetLogs.addItem(timestampDay)
-            self.listWidgetLogs.addItem('Url cannot be empty ¯\_(ツ)_/¯ ')
+            self.listWidgetLogs.addItem('Url cannot be empty ')
         else :
             timestampDay = self.getTimeStamp()
             self.listWidgetLogs.addItem(timestampDay)
-            self.listWidgetLogs.addItem('xpath input \_(ʘ_ʘ)_/  where is it ?')
+            self.listWidgetLogs.addItem('xpath input  where is it ?')
            
     # Saves logs from Preserved logs
     def saveLogs(self):
         timestampDay =  datetime.now().strftime("%A %d %B %Y %I %M %S%p")
         file = open(self.scriptDir + os.path.sep +'WebScrappingLogs '+ timestampDay +'.txt','a+')
-        i = 0
-        logsList = []
-        itemsTextList =  [str(self.listWidgetLogs.item(i).text()) for i in range(self.listWidgetLogs.count())]
-
-        # for log in self.listWidgetLogs.item(i).text():
-        #     i = i+ 1
-        #     print(log)
-        #     file.writelines(log)
-        file.writelines(itemsTextList)
+     
+        for i in range(self.listWidgetLogs.count()):
+            file.writelines(self.listWidgetLogs.item(i).text() + '\n')
+        # file.writelines(itemsTextList)
         file.close()
         self.listWidgetLogs.addItem('Logs saved Sucessfully')
     
     def stop(self):
-        self.stop = True
-        # os.system("pause")
+       print('process exiting')
+        
 
     # clear preservedLogs      
     def clearLogs(self):
@@ -118,10 +127,15 @@ class Web(QtWidgets.QMainWindow):
     def clear(self):
         self.listWidgetMain.clear()
 
+    # Open Guide window froms status bar
+    def guideWindow(self):
+        self.Guide.show()
+
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     web = Web()
     web.show()
+
     sys.exit(app.exec_())
 
 # https://www.reddit.com/r/ProgrammerHumor/
