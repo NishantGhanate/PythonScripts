@@ -5,6 +5,7 @@ from requests_html import HTMLSession
 import requests.exceptions 
 import os
 import sys
+import multiprocessing
 
 
 
@@ -58,30 +59,43 @@ class Web(QtWidgets.QMainWindow):
         except requests.exceptions.RequestException  as e:
             self.listWidgetLogs.addItem(str(e))
             return False
-            
+
+    def stop(self):
+        print ('Process running:', self.processGetSource, self.processGetSource.is_alive())
+        self.processGetSource.terminate()
+        print ('Process terminated:', self.processGetSource, self.processGetSource.is_alive())
+        # self.processGetSource.join()
+        # print ('Process joined:', self.processGetSource, self.processGetSource.is_alive())
+        # print ('Process exit code:', self.processGetSource.exitcode)
+        self.buttonGetInput.setEnabled(True)
+
     # This function will scrap it is also recurive if required 
     def getSource(self):
-        try:  
+        # try:  
             # returns list for single Xpath item 
-            src = self.r.html.xpath(self.xpathSrc)
-            # proceed further if list is not empty
-            if src :
-                timeStamp = self.getTimeStamp()
-                for s in src:
-                    print(s)
-                    s = str(s)
-                    # List widget only supports string
-                    self.listWidgetLogs.addItem(s)
+        src = self.r.html.xpath(self.xpathSrc)
+        # proceed further if list is not empty
+        if src :
+            self.buttonGetInput.setEnabled(False)
+            timeStamp = self.getTimeStamp()
+            for s in src:
+                # print(s)
+                s = str(s)
+                 # List widget only supports string
+                self.listWidgetLogs.addItem(s)
                 # if all pages is checked
-                if  radioButtonAll.isChecked():
-                    if self.r.html._next():
-                        print(self.r.html._next())
-                        url = self.validateUrl(self.r.html._next())
-                        if url:
-                            if self.r.status_code == 200:
-                                self.getSource()   
-        except :
-            self.listWidgetLogs.addItem('Xpath exception')
+            if  self.radioButtonAll.isChecked():
+                if self.r.html._next():
+                    print(self.r.html._next())
+                    url = self.validateUrl(self.r.html._next())
+                    if url:
+                        if self.r.status_code == 200:
+                            self.getSource()   
+            
+        
+
+        # except :
+            # self.listWidgetLogs.addItem('Xpath exception')
            
 
     # Get button function connection  
@@ -95,7 +109,9 @@ class Web(QtWidgets.QMainWindow):
                 timestampDay = self.getTimeStamp()
                 self.listWidgetLogs.addItem(timestampDay)
                 self.listWidgetMain.addItem(self.xpathSrc)
-                self.getSource()
+                self.processGetSource = multiprocessing.Process(target=self.getSource())
+                self.processGetSource.start()
+                # self.getSource()
         elif url is None or len(url) < 5:
             timestampDay = self.getTimeStamp()
             self.listWidgetLogs.addItem(timestampDay)
@@ -116,10 +132,6 @@ class Web(QtWidgets.QMainWindow):
         file.close()
         self.listWidgetLogs.addItem('Logs saved Sucessfully')
     
-    def stop(self):
-       print('process exiting')
-        
-
     # clear preservedLogs      
     def clearLogs(self):
         self.listWidgetLogs.clear()
@@ -138,5 +150,4 @@ if __name__ == "__main__":
 
     sys.exit(app.exec_())
 
-# https://www.reddit.com/r/ProgrammerHumor/
-# r = r.html.xpath('//*[@class="y8HYJ-y_lTUHkQIc1mdCq"]//h2//text()')
+
