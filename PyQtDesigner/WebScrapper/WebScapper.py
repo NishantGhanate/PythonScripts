@@ -61,12 +61,8 @@ class Web(QtWidgets.QMainWindow):
             return False
 
     def stop(self):
-        print ('Process running:', self.processGetSource, self.processGetSource.is_alive())
         self.processGetSource.terminate()
         print ('Process terminated:', self.processGetSource, self.processGetSource.is_alive())
-        # self.processGetSource.join()
-        # print ('Process joined:', self.processGetSource, self.processGetSource.is_alive())
-        # print ('Process exit code:', self.processGetSource.exitcode)
         self.buttonGetInput.setEnabled(True)
 
     # This function will scrap it is also recurive if required 
@@ -90,6 +86,7 @@ class Web(QtWidgets.QMainWindow):
                     url = self.validateUrl(self.r.html._next())
                     if url:
                         if self.r.status_code == 200:
+                            # self.listWidgetLogs.addItem('\n'+self.r.html._next())
                             self.getSource()   
             
         
@@ -111,7 +108,11 @@ class Web(QtWidgets.QMainWindow):
                 self.listWidgetMain.addItem(self.xpathSrc)
                 self.processGetSource = multiprocessing.Process(target=self.getSource())
                 self.processGetSource.start()
-                # self.getSource()
+                self.processGetSource.join()
+                print ('Process joined:', self.processGetSource, self.processGetSource.is_alive())
+                print ('Process exit code:', self.processGetSource.exitcode)
+                if self.processGetSource.exitcode == 0:
+                    self.stop()
         elif url is None or len(url) < 5:
             timestampDay = self.getTimeStamp()
             self.listWidgetLogs.addItem(timestampDay)
@@ -124,8 +125,14 @@ class Web(QtWidgets.QMainWindow):
     # Saves logs from Preserved logs
     def saveLogs(self):
         timestampDay =  datetime.now().strftime("%A %d %B %Y %I %M %S%p")
-        file = open(self.scriptDir + os.path.sep +'WebScrappingLogs '+ timestampDay +'.txt','a+')
-     
+        fileName = self.scriptDir + os.path.sep +'WebScrappingLogs '+ timestampDay +'.txt'
+        file = open(fileName,'a+' , encoding='utf-8')
+        
+        file.writelines('Command Logs ' + timestampDay)
+        for i in range(self.listWidgetMain.count()):
+            file.writelines(self.listWidgetMain.item(i).text() + '\n')
+
+        file.writelines('\nSource Logs')
         for i in range(self.listWidgetLogs.count()):
             file.writelines(self.listWidgetLogs.item(i).text() + '\n')
         # file.writelines(itemsTextList)
