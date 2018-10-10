@@ -25,21 +25,30 @@ class Web(QtWidgets.QMainWindow):
     def __init__(self):
         super(Web,self).__init__()
         self.scriptDir = os.path.dirname(os.path.realpath(__file__))
-        uic.loadUi(self.scriptDir + os.path.sep + 'WebScrapper.ui',self)
+        filePath = self.scriptDir + os.path.sep + 'WebScrapper.ui'
+        filePath = os.path.join(os.path.dirname(sys.executable), filePath)
+        uic.loadUi(filePath,self)
         self.setWindowIcon(QIcon(self.scriptDir + os.path.sep + 'icon.png')) 
         self.setWindowTitle('WebScrapper by [@Nishant Ghanate]') 
+        # self.setFixedSize(1366, 768)
         self.buttonGetInput.clicked.connect(self.getInput)
         self.buttonSaveLogs.clicked.connect(self.saveLogs)
         self.buttonClearLogs.clicked.connect(self.clearLogs)
         self.buttonClear.clicked.connect(self.clear)
         self.buttonStop.clicked.connect(self.stop)
+        self.buttonStop.setEnabled(False)
         self.oldUrl = "_"
         self.Guide = Guide()
         self.actionGuide.triggered.connect(self.guideWindow)
 
+    def resource_path(relative_path):
+        if hasattr(sys, '_MEIPASS'):
+            return os.path.join(sys._MEIPASS, relative_path)
+        return os.path.join(os.path.abspath("."), relative_path)
+
     #Acttivate UI fucntions
     QtCore.pyqtSlot()
-
+    
     # Returns Time in e.g 1 oct 2018 formart
     def getTimeStamp(self):
         return  datetime.now().strftime("%A %d. %B %Y %I:%M:%S %p")
@@ -91,7 +100,7 @@ class Web(QtWidgets.QMainWindow):
         except :
             self.listWidgetLogs.addItem('Xpath exception please try again')
            
-
+    
     # Get button function connection  
     def getInput(self):
         url = self.textEditUrl.toPlainText()
@@ -106,10 +115,11 @@ class Web(QtWidgets.QMainWindow):
                 self.processGetSource = multiprocessing.Process(target=self.getSource())
                 self.processGetSource.start()
                 self.processGetSource.join()
-
+                self.buttonGetInput.setEnabled(False)
                 print ('Process joined:', self.processGetSource, self.processGetSource.is_alive())
                 print ('Process exit code:', self.processGetSource.exitcode)
                 if self.processGetSource.exitcode == 0:
+                    self.buttonStop.setEnabled(False)
                     self.stop()
         elif url is None or len(url) < 5:
             timestampDay = self.getTimeStamp()
@@ -126,7 +136,7 @@ class Web(QtWidgets.QMainWindow):
         fileName = self.scriptDir + os.path.sep +'WebScrappingLogs '+ timestampDay +'.txt'
         file = open(fileName,'a+' , encoding='utf-8')
         
-        file.writelines('Command Logs ' + timestampDay)
+        file.writelines('Command Logs ' + timestampDay + '\n')
         for i in range(self.listWidgetMain.count()):
             file.writelines(self.listWidgetMain.item(i).text() + '\n')
 
