@@ -1,21 +1,9 @@
-https://www.reddit.com/r/ProgrammerHumor/
+https://old.reddit.com/r/ProgrammerHumor/
 
-//*[@class="y8HYJ-y_lTUHkQIc1mdCq"]//h2//text()
+//p[@class="title"]//a[@href]//text()
 
-# r = r.html.xpath('//*[@class="y8HYJ-y_lTUHkQIc1mdCq"]//h2//text()')
+======================================
+pip install tornado
+pip install pywin32
 
-https://devhints.io/xpath
-
-
-
-https://www.flipkart.com/mens-footwear/pr?count=40&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D699&p%5B%5D=sort%3Dpopularity&sid=osp%2Fcil&offer=nb:mp:08e0e6a129&fm=neo%2Fmerchandising&iid=M_4d538b55-a922-468b-8f37-0dff854c4bb1_3.FSXQIEK9KTMV&ppt=Homepage&ppn=Homepage&otracker=hp_omu_Deals%2Bof%2Bthe%2BDay_2_Under%2B%25E2%2582%25B9699%252BExtra%2B10%2525_FSXQIEK9KTMV_0&cid=FSXQIEK9KTMV
-
-//*[@class="_1vC4OE"]//text()
-
-
-
---------------------------------
-
-https://old.reddit.com/r/ProgrammerHumor/?count=26&before=t3_9mh6kn
-
-//p[@class="title"]//a//text()
+pyinstaller --onedir --onefile --name=Webscrapping --windowed "H:\Github\PythonScripts\PyQtDesigner\WebScrapper\WebScrapper.py"

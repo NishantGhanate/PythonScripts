@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets , uic
 from PyQt5.QtGui import  QIcon
 from datetime import datetime
 from requests_html import HTMLSession
+
 import requests.exceptions 
 import os
 import sys
@@ -67,32 +68,28 @@ class Web(QtWidgets.QMainWindow):
 
     # This function will scrap it is also recurive if required 
     def getSource(self):
-        # try:  
+        try:  
             # returns list for single Xpath item 
-        src = self.r.html.xpath(self.xpathSrc)
-        # proceed further if list is not empty
-        if src :
-            self.buttonGetInput.setEnabled(False)
-            timeStamp = self.getTimeStamp()
-            for s in src:
-                # print(s)
-                s = str(s)
-                 # List widget only supports string
-                self.listWidgetLogs.addItem(s)
-                # if all pages is checked
-            if  self.radioButtonAll.isChecked():
-                if self.r.html._next():
-                    print(self.r.html._next())
-                    url = self.validateUrl(self.r.html._next())
-                    if url:
-                        if self.r.status_code == 200:
+            src = self.r.html.xpath(self.xpathSrc)
+            # proceed further if list is not empty
+            if src :
+                self.buttonGetInput.setEnabled(False)
+                timeStamp = self.getTimeStamp()
+                for s in src:
+                    # print(s)
+                    s = str(s)
+                    # List widget only supports string
+                    self.listWidgetLogs.addItem(s)
+                    # if all pages is checked
+                if  self.radioButtonAll.isChecked():
+                    if self.r.html._next():
+                        print(self.r.html._next())
+                        url = self.validateUrl(self.r.html._next())
+                        if url and  self.r.status_code == 200:
                             # self.listWidgetLogs.addItem('\n'+self.r.html._next())
-                            self.getSource()   
-            
-        
-
-        # except :
-            # self.listWidgetLogs.addItem('Xpath exception')
+                            self.getSource()     
+        except :
+            self.listWidgetLogs.addItem('Xpath exception please try again')
            
 
     # Get button function connection  
@@ -109,6 +106,7 @@ class Web(QtWidgets.QMainWindow):
                 self.processGetSource = multiprocessing.Process(target=self.getSource())
                 self.processGetSource.start()
                 self.processGetSource.join()
+
                 print ('Process joined:', self.processGetSource, self.processGetSource.is_alive())
                 print ('Process exit code:', self.processGetSource.exitcode)
                 if self.processGetSource.exitcode == 0:
