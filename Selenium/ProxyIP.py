@@ -7,11 +7,12 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.proxy import Proxy, ProxyType
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.keys import Keys 
+from selenium.webdriver.common.by import By
 import os 
 
 scriptDir = os.path.dirname(os.path.realpath(__file__))
-foxDriver = scriptDir + os.path.sep + 'Driver' + os.path.sep + 'foxdriver.exe'
+foxDriver = scriptDir + os.path.sep + 'Driver' + os.path.sep + 'geckodriver.exe'
 chromeDriver = scriptDir + os.path.sep + 'Driver' + os.path.sep + 'chromedriver.exe' 
 
 def getProxies():
@@ -25,9 +26,9 @@ def getProxies():
         ip = p.find_elements_by_xpath('.//td[1]')[0].text
         port = p.find_elements_by_xpath('.//td[2]')[0].text
         https = p.find_elements_by_xpath('.//td[7]')[0].text
-        # print(p.find_elements_by_xpath('.//td[4]')[0].text) 
-        # print(p.find_elements_by_xpath('.//td[7]')[0].text)
-        proxies.append(ip+":"+port+","+https)
+        if https =='yes':
+            proxies.append(ip+":"+port)
+
         # print(proxies)
     driver.close() 
     return proxies
@@ -37,32 +38,35 @@ def getProxies():
 def changeHostFirefox(proxy):
 
     ip, port = proxy.split(':')
-    profile = webdriver.FirefoxProfile()
-    profile.set_preference("browser.privatebrowsing.autostart", True)
-    profile.set_preference("network.proxy.type", 1)
-    profile.set_preference("network.proxy.http", ip)
-    profile.set_preference("network.proxy.http_port", port)
+    port = int(port)
+    firefox_profile = webdriver.FirefoxProfile()
+    firefox_profile.set_preference("browser.privatebrowsing.autostart", True)
+    firefox_profile.set_preference("network.proxy.type", 1)
+    firefox_profile.set_preference("network.proxy.http", ip)
+    firefox_profile.set_preference("network.proxy.http_port", port)
+    firefox_profile.set_preference("network.proxy.ssl", ip )
+    firefox_profile.set_preference("network.proxy.ssl_port", port)
     # set user_agent
-    # profile.set_preference("general.useragent.override", generate_user_agent())
-    profile.update_preferences()
-    driver = webdriver.Firefox(executable_path = foxDriver,firefox_profile=profile)
-    driver.get("http://www.google.com")
-    search = driver.find_element_by_name('q')
-    search.send_keys("my ip")
-    search.send_keys(Keys.RETURN)
+    # firefox_profile.set_preference("general.useragent.override", generate_user_agent())
+    firefox_profile.update_preferences()
+    driver = webdriver.Firefox(executable_path = foxDriver,firefox_profile=firefox_profile)
+    driver.get("http://whatismyipaddress.com")
+    driver.implicitly_wait(2)
+    # driver.execute_script('''window.open("https://www.youtube.com/watch?v=Z5VdGcOWGHY&t=3s","_self");''')
+    driver.get("https://www.youtube.com/watch?v=IKZ2Zbmoccw")
+    elementTime = driver.find_element_by_xpath('/html/body/ytd-app/div[1]/ytd-page-manager/ytd-watch-flexy/div[3]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[20]/div[2]/div[1]/div/span[3]')
+    print(elementTime.text)
 
-def changeHostFirefox1():
-    # myProxy = proxies[0]
-    PROXY = "115.178.25.130:51056"
-    print(PROXY)
-    proxy = Proxy({
+
+def changeHostFirefox1(proxy):
+    print(proxy)
+    PROXY = Proxy({
         'proxyType': ProxyType.MANUAL,
-        'httpProxy': PROXY,
-        'ftpProxy': PROXY,
-        'sslProxy': PROXY,
-        'noProxy': '' # set this value as desired
+        'httpProxy': proxy,
+        'ftpProxy': proxy,
+        'sslProxy': proxy
         })
-    driver = webdriver.Firefox(executable_path = foxDriver,proxy=proxy)
+    driver = webdriver.Firefox(executable_path = foxDriver,proxy=PROXY)
     driver.get("http://www.google.com")
     search = driver.find_element_by_name('q')
     search.send_keys("my ip")
@@ -83,14 +87,12 @@ def changeHostCrome(proxy):
     print(chrome.get_log('driver'))
 
 # get proxies
-# proxies = getProxies()
-# print(proxies)
+proxies = getProxies()
+print(proxies)
 
-# if proxies:
-#     changeHostCrome(proxies[0])
+if proxies:
+    changeHostFirefox(proxies[0])
+    # changeHostCrome(proxies[0])
 
-
-proxy = '66.98.56.237:8080'
-changeHostCrome(proxy)
-# # proxy = "115.178.25.130:51056"
+# changeHostFirefox("212.211.185.27:3128")
 

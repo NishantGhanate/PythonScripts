@@ -1,3 +1,13 @@
 *.db
 Thumbs.db
 geckodriver.log
+
+# ignores all .txt files JUST in the current folder
+*.db
+ 
+# ignores all .txt recursive from the current folder
+**.db
+ 
+# ignores all .txt in subdirectories recursive from the current 
+# folder (does not include the current folder)
+**/*.db
