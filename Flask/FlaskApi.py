@@ -8,7 +8,7 @@ class Hello(Resource):
     def get(self):
         return {'about' : 'Hello programmer !'}
     def post(self):
-        postData = request.json()
+        postData = request.get_json()
         return {'You have sent ' : postData}
 
 class Math(Resource):
