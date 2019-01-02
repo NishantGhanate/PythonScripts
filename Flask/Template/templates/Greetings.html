@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+   <body>
+    <h1>Greeting Card</h1>
+    <div class='cards'>
+        <div class='card'>
+            <div class='front face'>
+                <h2> To : {{To}} </h2>
+            </div>
+            <div class="back face">
+                <h2>{{Message}}</h2>
+                <br>
+                <h5> - From {{From}}</h5>
+            </div>
+        </div>
+    </div>
+   </body>
+</html>
+
+<style>
+/* authour : https://codepen.io/makzan/pen/KCfGr */
+.cards {
+    padding-top: 20px;
+    padding-left: 30%;   
+}
+.card {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    perspective: 700px;
+    
+    float: left;
+    margin: 10px;
+}
+.card:hover .front{
+    transform: rotateY(-77deg);  
+}
+.card:hover .back {
+    transform: rotateY(20deg);  
+}
+.card:hover .face {
+    transition: all 0.3s ease-out;
+    
+}
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0091aa;
+    backface-visibility: hidden; 
+    transition: all 0.5s ease-out;
+    transform-origin: 0 0;
+}
+.front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.back {
+    background: #0091aa;
+    transform: rotateY(0deg);
+    z-index: 1;
+}
+
+/* Not related */
+* {
+  box-sizing: border-box;
+}
+.back {
+  padding: 3em;
+}
+.back h2{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+.front h2{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 30%;
+}
+
+h1{
+  text-align: center;
+}
+
+</style>
