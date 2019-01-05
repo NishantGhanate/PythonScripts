@@ -21,12 +21,14 @@ class Ocr(QtWidgets.QMainWindow):
         self.buttonGetImage.clicked.connect(self.getImage) 
         self.buttonExtractText.clicked.connect(self.extractText) 
         self.buttonExtractText.setEnabled(False)
+        self.buttonClear.clicked.connect(self.clearText) 
+        self.buttonSave.clicked.connect(self.saveText) 
     QtCore.pyqtSlot()
 
     def getImage(self):
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
-        self.fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self,"Open an image", "","All Files (*);;Python Files (*.py)", options=options)
+        self.fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self,"Open an image", "","All Files (*);;Image Files (*.jpg);;Image Files (*.png)", options=options)
         if self.fileName:
             print(self.fileName)
             pattern = ".(jpg|png|jpeg|bmp|jpe|tiff)$"
@@ -44,9 +46,23 @@ class Ocr(QtWidgets.QMainWindow):
         # Run tesseract OCR on image
         text = pytesseract.image_to_string(img, config=config)
         # Print recognized text
-        self.textBrowser.append(text)
+        self.textEdit.append(text)
         print(text)
 
+    def clearText(self):
+         self.textEdit.clear()
+
+    # https://pythonspot.com/pyqt5-file-dialog/
+    def saveText(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        fileName, _ = QFileDialog.getSaveFileName(self,"QFileDialog.getSaveFileName()","","All Files (*);;Text Files (*.txt)", options=options)
+        if fileName:
+            print(fileName)
+            file = open(fileName,'w')
+            text = self.textEdit.toPlainText()
+            file.write(text)
+            file.close()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
