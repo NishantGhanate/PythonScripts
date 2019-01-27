@@ -21,6 +21,7 @@ class Instagram:
         self.savePhotosDir = savePhotosDir # photos saving DIR
         self.count = count # images count
         self.images = []
+        self.videos = []
         self.scriptDir = os.path.dirname(os.path.realpath(__file__))  # current working Folder/Directory 
         self.postsUrls = []
     def loadDriver(self):
@@ -56,7 +57,7 @@ class Instagram:
         while True:
             print("Scrolling..............")
             path = self.driver.find_elements_by_xpath("//*[@class='v1Nh3 kIKUG  _bz0w']//a")        
-            self.getImages(path)
+            self.getPostUrls(path)
             self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")  # Scroll down to bottom 
             time.sleep(SCROLL_PAUSE_TIME) # Wait to load page
             # Calculate new scroll height and compare with last scroll 
@@ -67,21 +68,21 @@ class Instagram:
                 return 
             last_height = new_height 
 
-    def getImages(self,path):
+    def getPostUrls(self,path):
         print("\nRetriving posts url .......")  
         for p in path:
             url = p.get_attribute("href")
-            print(url)
+            # print(url)
             if url not in self.postsUrls:
                 self.postsUrls.append(url)
 
-        # print(len(self.postsUrls))
+        print("Total posts found = " + str(len(self.postsUrls)))
         # print(self.postsUrls)
         
 
     def getPost(self):
-
         for url in self.postsUrls:
+            print(url+"\n")
             self.driver.execute_script("window.open('"+url+"', '_self')")
             self.driver.implicitly_wait(2)
             imagesXpath = self.driver.find_elements_by_xpath("//*[@class='FFVAD']")
@@ -91,12 +92,20 @@ class Instagram:
                 img = img.split(",")
                 img = img[-1][:-6]
                 print(img)
-                if img not in self.images:
+                if img not in self.images and img is not None :
                     # last one being highest res image -4 to escpae resoluton X*X in url
-                    self.images.append(str(img[-1][:-6]))
+                    self.images.append(img)
 
-        print(len(self.images))
+            videosXpath = self.driver.find_elements_by_xpath("//*[@class='tWeCl']")
+            for v in videosXpath:
+                video = v.get_attribute("src")
+                if video is not self.videos and video is not None:
+                    self.videos.append(video)
+
+        print("\nTotal Images found = "  + str(len(self.images)))
         print(self.images)
+        print("\nTotal Videos found = " + str(len(self.videos)))
+        print(self.videos)
         self.saveImages()
    
     def saveImages(self):
@@ -123,17 +132,23 @@ class Instagram:
                 urllib.urlretrieve(self.images[i],fileName)
                 print("\nSaving image = "+str(fileName))
 
+            if len(self.videos) >= 1:
+                for i in range(len(self.videos)):
+                    fileName = self.savePhotosDir + os.sep + userName + str(i)+".mp4"
+                    urllib.urlretrieve(self.videos[i],fileName)
+                    print("\nSaving image = "+str(fileName))
+
         except Exception as e:
             logger.error(str(e))
 
-        print("Excution completed .....")
+        print("Execution completed .....")
         self.driver.close()
 
 if __name__ == "__main__":
 
     driverPath = r"H:\Github\PythonScripts\Selenium\Driver\chromedriver.exe"
-    savePhotosDir = r"D:\Instagram\SundarPichai1"
-    url = "https://www.instagram.com/sundarpichai/?hl=en"
+    savePhotosDir = r"D:\Instagram\Mark"
+    url = "https://www.instagram.com/zuck/?hl=en"
     count = 500
     
     instagram = Instagram(
