@@ -26,10 +26,9 @@ def getProxies():
         ip = p.find_elements_by_xpath('.//td[1]')[0].text
         port = p.find_elements_by_xpath('.//td[2]')[0].text
         https = p.find_elements_by_xpath('.//td[7]')[0].text
-        if https =='yes':
+        if ip and port != None:
             proxies.append(ip+":"+port)
 
-        # print(proxies)
     driver.close() 
     return proxies
 
@@ -38,9 +37,10 @@ def getProxies():
 def changeHostFirefox(proxy):
 
     ip, port = proxy.split(':')
+    print("Using ip {}".format(proxy))
     port = int(port)
     firefox_profile = webdriver.FirefoxProfile()
-    firefox_profile.set_preference("browser.privatebrowsing.autostart", True)
+    #firefox_profile.set_preference("browser.privatebrowsing.autostart", True)
     firefox_profile.set_preference("network.proxy.type", 1)
     firefox_profile.set_preference("network.proxy.http", ip)
     firefox_profile.set_preference("network.proxy.http_port", port)
@@ -50,9 +50,13 @@ def changeHostFirefox(proxy):
     # firefox_profile.set_preference("general.useragent.override", generate_user_agent())
     firefox_profile.update_preferences()
     driver = webdriver.Firefox(executable_path = foxDriver,firefox_profile=firefox_profile)
-    driver.get("http://whatismyipaddress.com")
-    driver.implicitly_wait(2)
-    # driver.execute_script('''window.open("https://www.youtube.com/watch?v=Z5VdGcOWGHY&t=3s","_self");''')
+    # driver.get("http://whatismyipaddress.com")
+    driver.get("http://www.google.com")
+    search = driver.find_element_by_name('q')
+    search.send_keys("my ip")
+    search.send_keys(Keys.RETURN)
+    #driver.implicitly_wait(5)
+    driver.execute_script('''window.open("https://www.youtube.com/watch?v=Z5VdGcOWGHY&t=3s","_self");''')
     driver.get("https://www.youtube.com/watch?v=IKZ2Zbmoccw")
     elementTime = driver.find_element_by_xpath('/html/body/ytd-app/div[1]/ytd-page-manager/ytd-watch-flexy/div[3]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[20]/div[2]/div[1]/div/span[3]')
     print(elementTime.text)
@@ -87,11 +91,10 @@ def changeHostCrome(proxy):
     print(chrome.get_log('driver'))
 
 # get proxies
-proxies = getProxies()
+# proxies = getProxies()
 print(proxies)
-
-if proxies:
-    changeHostFirefox(proxies[0])
+# if proxies:
+    # changeHostFirefox(proxies[1])
     # changeHostCrome(proxies[0])
 
 # changeHostFirefox("212.211.185.27:3128")

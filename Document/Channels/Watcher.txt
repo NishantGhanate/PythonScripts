@@ -1,0 +1,10 @@
+I would like to present you my idea regarding Smart home devices. This technology can used as security camera as well as setting up smart traps to prevent any intrusion. or accomplish any other automation work like watering plants in our absence or feeding pets while at work .
+
+A year back i already had this beta phase working model of this idea. It sends images to our android app anytime there is a movement at our place.
+Here's the link : https://www.youtube.com/watch?v=JmOqmKdodQg
+
+Further i would like to add smart traps into this system where if there's any intrusion . The smart system can help by many ways ( e.g Activating loud Siren/ Intense Light / Sending user notification to call police ) for basic home usage .
+
+All this can be done by simply Web camera Raspberry pie and Ardiuno devices .
+
+The goal of this project to Idea  is to bring automation to every home in very cost effective manner such one device can help complete many other work and bring people together to spresent their own customized way of using it .
