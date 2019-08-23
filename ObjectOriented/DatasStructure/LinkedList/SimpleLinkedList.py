@@ -23,6 +23,15 @@ class SinglyLinkedList:
         node = Node(data)
         node.next = llist
         return node
+    
+    def insertNodeAtPosition(head, data, position):
+        n = head
+        for _ in range(position - 1):
+            n = n.next
+        n_next = n.next
+        n.next = SinglyLinkedListNode(data)
+        n.next.next = n_next
+        return head
 
     def printNode(self,head):
         while head:
@@ -60,6 +69,14 @@ if __name__ == '__main__':
     for tail in tailData:
         llist_head = llist.insertNodeAtHead(llist.head,tail)
         llist.head = llist_head
+    
+    # Print all nodes 
+    print('\n----------- Printing inserted node at head  -----------\n')
+    llist.printNode(llist.head)
+    
+    # Insert data at a given position
+    for tail in tailData:
+        llist = llist.insertNodeAtPosition(head=llist.head ,data=tail,position = 1)
     
     # Print all nodes 
     print('\n----------- Printing inserted node at head  -----------\n')
