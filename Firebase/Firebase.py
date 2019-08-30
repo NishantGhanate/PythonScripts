@@ -64,7 +64,6 @@ class Firebase:
 
     def PostImage(self):
         # bucket = fb_storage.bucket()
-        
         # print(client)
 
         with open('H:/Github/PythonScripts/Firebase/AdminSdk.json') as source:
@@ -85,7 +84,7 @@ class Firebase:
 
 firebase = Firebase()
 
-firebase.PostImage()
+firebase.GetFireBase()
 
 
 
