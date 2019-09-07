@@ -1,6 +1,6 @@
-#Visualitation : sync vs async
+
+# Visualitation : sync vs async
+
+![](https://github.com/NishantGhanate/PythonScripts/blob/master/Async/image.jpeg)
 
 > pip install asyncio
-
-![](https://github.com/NishantGhanate/PythonScripts/Async/image.jpeg)
-
