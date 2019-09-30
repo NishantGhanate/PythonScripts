@@ -1,0 +1,17 @@
+
+https://www.thefactsite.com/1000-interesting-facts/
+https://www.thefactsite.com/1000-interesting-facts/6/
+
+p.list
+
+
+https://www.thefactsite.com/top-100-random-funny-facts/2/
+
+def space():
+    r = requests.get("")
+    soup = BeautifulSoup(r.content, 'html5lib') 
+    table = soup.findAll('p', attrs = {'class':'list'}) 
+    index = random.randint(0, len(table) )
+    fact = table[ index ]
+    fact = fact.text
+    return fact , index
