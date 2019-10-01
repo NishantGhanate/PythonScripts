@@ -8,7 +8,7 @@ from telegram.ext import Updater, CommandHandler
 import requests
 import random 
 from bs4 import BeautifulSoup 
-
+from lxml import html
 
 # Enabling logging
 logging.basicConfig(level=logging.INFO,
@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger()
 
 os.environ['MODE'] = 'dev'
-os.environ['TOKEN'] = '851568417:AAH3cOtvVaJ9RATU3cmW8l9BGu2VAHCpMBA'
+os.environ['TOKEN'] = ''
 
 # Getting mode, so we could define run function for local and Heroku setup
 mode = os.getenv("MODE")
