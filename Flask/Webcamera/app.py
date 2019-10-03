@@ -1,6 +1,11 @@
 from flask import Flask, render_template, Response
 from camera import Camera
 
+import socket    
+
+
+
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -19,4 +24,13 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    hostname = socket.gethostname()    
+    IPAddr = socket.gethostbyname(hostname)    
+    print("Your Computer Name is:" + hostname)    
+    print("Your Computer IP Address is:" + IPAddr)
+    app.run(host=IPAddr , port='5000' ,threaded=True)
+
+    # app.run(host='127.0.0.1' , port='5000' ,threaded=True)
+    # https://ngrok.com/download
+    # ngrok http 5000 
