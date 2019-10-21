@@ -51,6 +51,7 @@ class Youtube():
              return False
                               
     def start(self,):
+        driver.implicitly_wait(10)
         self.driver.get(self.url)
         # Had to write like because document.body.scrollHeight was returning 0 on youtube
         previous = 0
