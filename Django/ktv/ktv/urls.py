@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
+from API.resources import NoteResource
+
 
 urlpatterns = [
     path('',include('posts.urls') ),
     path('admin/', admin.site.urls),
-    path('posts/', include('posts.urls'))
+    path('posts/', include('posts.urls')),
+    path('testlink/',include('API.urls'))
+    
+    
 ]

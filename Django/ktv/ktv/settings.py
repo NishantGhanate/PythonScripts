@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1','68abcac6.ngrok.io']
 
 INSTALLED_APPS = [
     'posts',
+    'API',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
