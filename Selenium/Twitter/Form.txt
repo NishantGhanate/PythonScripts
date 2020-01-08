@@ -1,0 +1,43 @@
+https://twitter.com/username/media
+
+[{"internal_referer":null,"client_version":"macaw-swift","user_id":0,"items":[{"id":"1214483582363693057","item_type":"0","media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","video_uuid":"1214483498242674688","video_owner_id":"44196397","video_type":"video","content_id":"1214483498242674688","publisher_id":"44196397","media_session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","client_media_event":{"media_client_event_type":{"play":{}},"session_state":{"session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","content_video_identifier":{"media_platform_identifier":{"media_category":7,"media_id":"1214483498242674688"}},"tweet_id":"1214483582363693057"},"playing_media_state":{"video_type":2,"media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","media_metadata":{"twitter_publisher_id":"44196397","publisher_identifier":{"twitter_publisher_identifier":{"id":"44196397"}}}},"player_state":{"is_muted":true}},"live_broadcast_details":{},"live_video_event_details":{}}],"event_namespace":{"client":"web","page":"permalink","section":"permalink","component":"tweet","element":"video_player","action":"play"},"triggered_on":1578465826297,"format_version":2,"_category_":"client_event"},{"internal_referer":null,"client_version":"macaw-swift","user_id":0,"items":[{"id":"1214483582363693057","item_type":"0","media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","video_uuid":"1214483498242674688","video_owner_id":"44196397","video_type":"video","content_id":"1214483498242674688","publisher_id":"44196397","media_session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","client_media_event":{"media_client_event_type":{"playback_start":{"latency_millis":166,"cache_info":{"notCached":{}}}},"session_state":{"session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","content_video_identifier":{"media_platform_identifier":{"media_category":7,"media_id":"1214483498242674688"}},"tweet_id":"1214483582363693057"},"playing_media_state":{"video_type":2,"media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","media_metadata":{"twitter_publisher_id":"44196397","publisher_identifier":{"twitter_publisher_identifier":{"id":"44196397"}}}},"player_state":{"is_muted":true}},"latency":166,"live_broadcast_details":{},"live_video_event_details":{}}],"event_namespace":{"client":"web","page":"permalink","section":"permalink","component":"tweet","element":"video_player","action":"playback_start"},"triggered_on":1578465826299,"format_version":2,"_category_":"client_event"},{"internal_referer":null,"client_version":"macaw-swift","user_id":0,"items":[{"id":"1214483582363693057","item_type":"0","media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","video_uuid":"1214483498242674688","video_owner_id":"44196397","video_type":"video","content_id":"1214483498242674688","publisher_id":"44196397","media_session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","client_media_event":{"media_client_event_type":{"heartbeat":{"buffering_duration_millis":"0","buffering_count":0,"percent_in_view":100,"data_usage_bytes":"796160","start_program_date_time_millis":"0","end_program_date_time_millis":"1594","live_or_non_live_heartbeat_metrics":{"non_live_heartbeat_metrics":{}}}},"session_state":{"session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","content_video_identifier":{"media_platform_identifier":{"media_category":7,"media_id":"1214483498242674688"}},"tweet_id":"1214483582363693057"},"playing_media_state":{"video_type":2,"media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","media_metadata":{"twitter_publisher_id":"44196397","publisher_identifier":{"twitter_publisher_identifier":{"id":"44196397"}}}},"player_state":{"is_muted":true}},"buffering_duration_millis":0,"video_visibility":100,"start_program_date_time_millis":0,"end_program_date_time_millis":1594,"data_usage_bytes":796160,"live_broadcast_details":{},"live_video_event_details":{}}],"event_namespace":{"client":"web","page":"permalink","section":"permalink","component":"tweet","element":"video_player","action":"heartbeat"},"triggered_on":1578465827952,"format_version":2,"_category_":"client_event"},{"internal_referer":null,"client_version":"macaw-swift","user_id":0,"items":[{"id":"1214483582363693057","item_type":"0","media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","video_uuid":"1214483498242674688","video_owner_id":"44196397","video_type":"video","content_id":"1214483498242674688","publisher_id":"44196397","media_session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","client_media_event":{"media_client_event_type":{"playback_25":{}},"session_state":{"session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","content_video_identifier":{"media_platform_identifier":{"media_category":7,"media_id":"1214483498242674688"}},"tweet_id":"1214483582363693057"},"playing_media_state":{"video_type":2,"media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","media_metadata":{"twitter_publisher_id":"44196397","publisher_identifier":{"twitter_publisher_identifier":{"id":"44196397"}}}},"player_state":{"is_muted":true}},"live_broadcast_details":{},"live_video_event_details":{}}],"event_namespace":{"client":"web","page":"permalink","section":"permalink","component":"tweet","element":"video_player","action":"playback_25"},"triggered_on":1578465829294,"format_version":2,"_category_":"client_event"},{"internal_referer":null,"client_version":"macaw-swift","user_id":0,"items":[{"id":"1214483582363693057","item_type":"0","media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","video_uuid":"1214483498242674688","video_owner_id":"44196397","video_type":"video","content_id":"1214483498242674688","publisher_id":"44196397","media_session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","client_media_event":{"media_client_event_type":{"heartbeat":{"buffering_duration_millis":"0","buffering_count":0,"percent_in_view":0,"data_usage_bytes":"0","start_program_date_time_millis":"1690","end_program_date_time_millis":"6441","live_or_non_live_heartbeat_metrics":{"non_live_heartbeat_metrics":{}}}},"session_state":{"session_id":"7b6009bb-00f7-456c-8702-eb6861e2b593","content_video_identifier":{"media_platform_identifier":{"media_category":7,"media_id":"1214483498242674688"}},"tweet_id":"1214483582363693057"},"playing_media_state":{"video_type":2,"media_asset_url":"https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10","media_metadata":{"twitter_publisher_id":"44196397","publisher_identifier":{"twitter_publisher_identifier":{"id":"44196397"}}}},"player_state":{"is_muted":true}},"buffering_duration_millis":0,"video_visibility":0,"start_program_date_time_millis":1690,"end_program_date_time_millis":6441,"data_usage_bytes":0,"live_broadcast_details":{},"live_video_event_details":{}}],"event_namespace":{"client":"web","page":"permalink","section":"permalink","component":"tweet","element":"video_player","action":"heartbeat"},"triggered_on":1578465832953,"format_version":2,"_category_":"client_event"}]
+
+
+
+
+media_asset_url : https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10
+
+
+div > data-permalink-path="/elonmusk/status/1214483582363693057"
+
+
+
+
+<div class="AdaptiveMedia-photoContainer js-adaptive-photo " 
+data-image-url="https://pbs.twimg.com/media/ENLQkiKXYAIAh-a.jpg" d
+ata-element-context="platform_photo_card">
+
+
+
+<span class="metadata">
+    <span>1:47 AM - 7 Jan 2020</span>
+      
+<ul class="stats"> - li> activity-popup-title="31,874 retweets"
+
+
+
+
+
+
+
+
+
+
+
+https://ffmpeg.zeranoe.com/builds/
+
+eg.
+download the build and extract it , then goto 
+cd bin to ffmpeg.exe from 
+
+ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10" -c copy video.mp4
