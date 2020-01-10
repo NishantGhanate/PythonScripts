@@ -88,7 +88,7 @@ class Twitter:
                 tweet = l.find('div', attrs = {'class':'js-tweet-text-container'})
                 tweet = tweet.find('p').getText()
                 # print('Tweet {}'.format(tweet))
-                mydict['Tweet'] = tweet.encode(encoding='UTF-8',errors='backslashreplace')
+                mydict['Tweet'] = tweet.encode(encoding='UTF-8',errors='replace')
 
                 stats = l.find_all('span', attrs = {'class':'ProfileTweet-actionCount'})[0:3]
                 for s , t in zip(stats,titels):
@@ -113,8 +113,8 @@ class Twitter:
         
             
 if __name__ == "__main__":
-    savefile = 'Drone.csv'
-    url = "https://twitter.com/IDRLdroneracing"
+    savefile = 'ElonBoi.csv'
+    url = "https://twitter.com/elonmusk"
     twitter = Twitter(url = url , saveFile= savefile)
     twitter.yeet()
 
