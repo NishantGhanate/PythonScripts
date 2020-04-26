@@ -12,11 +12,29 @@ from bs4 import BeautifulSoup
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--incognito")
 chrome_options.add_argument("--start-maximized")
-chrome_options.add_argument("--enable-automation")
+
+chrome_options.add_argument("--enable-automation") # dont use this 
+
 chrome_options.add_argument("--disable-extensions")
 chrome_options.add_argument("--disable-popup-blocking")
+chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+chrome_options.add_experimental_option('useAutomationExtension', False)
+chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+chrome_options.add_experimental_option.add_experimental_option("excludeSwitches", ["ignore-certificate-errors", "safebrowsing-disable-download-protection", "safebrowsing-disable-auto-update", "disable-client-side-phishing-detection"])
 self.driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_options)
 
+# Crome Override user-agent 
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--incognito")
+chrome_options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36")
+driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
+driver.get(url)
+
+# Firefox Override user-agent 
+profile = webdriver.FirefoxProfile()
+profile.set_preference("general.useragent.override", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36")
+driver = webdriver.Firefox(GeckoDriverManager().install())
+driver.get(url)
 
 
 webdriver.ActionChains(self.driver).send_keys(self.keyword).send_keys(Keys.ENTER).perform()
@@ -26,7 +44,7 @@ webdriver.ActionChains(self.driver).send_keys(Keys.ENTER).perform()
 html = self.driver.page_source
 soup = BeautifulSoup(html,'html5lib') 
 
-searchList = soup.select("div[class*="+ "'" + some_name + "'" +"]")
+searchList = soup.select("div[class*='" + some_name + "']")
 searchList = soup.find_all('div',attrs={'class': 'some_name'})
 for s in searchList:
     a = s.find('div',attrs={'class': 'some_name'})
@@ -45,10 +63,13 @@ for i in range(0,height,1000):
 
 # for dynamic nature
 thing = 'cool'
-some  = self.driver.find_element_by_xpath("//div[@class="+"'"+thing+"'"+"]").text
-self.driver.find_element_by_xpath("div[@class="+"'"+ok+"'"+"]").click()
+some  = self.driver.find_element_by_xpath("//div[@class='"+thing+"']").text
+self.driver.find_element_by_xpath("div[@class='"+ok+"']").click()
 self.driver.find_element_by_xpath("//input[@accept='*']").send_keys(doc)
-infoBar = self.driver.find_element_by_xpath("//a[@interactionclass=""'" +info+"'" "]")
+infoBar = self.driver.find_element_by_xpath("//a[@interactionclass='" +info+"']")
+postsPath = "//*[@class='"+posts+"']//a"
+path = self.driver.find_elements_by_xpath(postsPath)  
+
 
 # for classes with same name in first half
 # e.g ZZZ a , ZZZ b ZZZ c
