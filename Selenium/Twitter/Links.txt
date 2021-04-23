@@ -1,0 +1,9 @@
+<div class="stream-container  " data-max-position="1214483582363693057" data-min-position="1205025812526686208>
+
+<div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content
+       original-tweet js-original-tweet
+       has-cards  has-content
+" data-tweet-id="1214483582363693057" data-item-id="1214483582363693057" data-permalink-path="/elonmusk/status/1214483582363693057">
+
+
+div.content - div>small.time - ahref + converstaion id

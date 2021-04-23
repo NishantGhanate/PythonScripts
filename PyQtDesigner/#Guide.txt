@@ -1,5 +1,20 @@
 pip3 install PyQt5
 pip3 install PyQt5-tools
+============================================================================
+pip install pywin32
+pip install pyinstaller 
+
+in cmd 
+pyinstaller --onedir --onefile --name=Webscrapping --windowed "H:\Github\PythonScripts\PyQtDesigner\WebScrapper\WebScrapper.py"
+
+============================================================================
+
+in cmd :
+cd G:\Program Files\Python36\Scripts
+
+G:\Program Files\Python36\Scripts>pyuic5 -x "H:\Github\PythonScripts\PyQtDesigner\WebScrapper\WebScrapper.ui" -o "H:\Github\PythonScripts\PyQtDesigner\WebScrapper\WebScrapperUI.py"
+
+============================================================================
 
 css
 background-image:url(H:/Github/PythonScripts/PyQtDesigner/Watcher/trail.jpg);

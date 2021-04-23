@@ -1,0 +1,17 @@
+{% extends 'posts/layout.html' %}
+
+
+{% block content %}
+
+<h2> {{title}}</h2>
+
+<h3>Din mein do baar </h3>
+<img src="https://scontent.fbom12-1.fna.fbcdn.net/v/t1.0-9/18193672_585715468292431_6530855932487170703_n.jpg?_nc_cat=110&_nc_ohc=XMayLfCWbtAAQn6U74nOg8wqvDKFfBq8VckLt06xLmf8jKIiiJfb2zPIw&_nc_ht=scontent.fbom12-1.fna&oh=d3f6b6466900e6003757bcd8b6dd9282&oe=5EB0827E" alt="" width="200">
+
+<ul class="collection">
+    {% for p in posts %}
+        <li class="collection-item"> <a href="/posts/details/{{p.id}}"> {{p.title}} ,{{p.id}} </a> </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

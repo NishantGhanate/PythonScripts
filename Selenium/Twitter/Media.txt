@@ -1,0 +1,11 @@
+https://twitter.com/username/media
+
+https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10
+
+https://ffmpeg.zeranoe.com/builds/
+
+eg.
+download the build and extract it , then goto 
+cd bin to ffmpeg.exe from 
+
+ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "https://video.twimg.com/ext_tw_video/1214483498242674688/pu/pl/K9U_FxcIhR71Ef1F.m3u8?tag=10" -c copy video.mp4

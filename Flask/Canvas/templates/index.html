@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drawing board</title>
+    <script type=text/javascript src="{{url_for('static', filename='jquery.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='sc.js') }}"></script>
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+      </script>
+</head>
+<body>
+  <h3>Click inside the canvas below heading to get the x (horizontal) and y (vertical) coordinates of the mouse pointer when it was clicked.</h3>
+   <div >
+      Location : <input type='text' id="cordinates"  value="x,y"/>
+    </div>
+    <br>
+  <canvas id="myCanvas" width="200" height="100" style="border:2px solid #000000;">
+  </canvas>
+
+  <h1>Flask + Autogui </h1>
+  <button id='startButton' name='start'> Windows start </button>
+
+  <script type=text/javascript>
+    $(function() {
+
+      $('#startButton').bind('click', function() {
+            // document.getElementById("cordinates").value = coords;
+            $.getJSON($SCRIPT_ROOT + '/windows', {
+              a: $('input[name="start"]').val()
+            }, function(data) {
+              $("#result").text(data.result);
+            });
+            return false;
+      );
+
+      $('#myCanvas').bind('click', function(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var coords = "X : " + x + ", Y : " + y;
+        $('#cordinates').val(coords);
+        console.log(coords);
+        $.getJSON($SCRIPT_ROOT + '/blinkyboi', {
+              x:  event.clientX,
+              y: event.clientY
+            }, function(data) {
+              $("#result").text(data.result);
+            });
+            return false;
+      });
+
+    });
+    </script>
+
+</body>
+</html>
+
+

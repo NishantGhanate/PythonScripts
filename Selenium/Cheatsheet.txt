@@ -1,0 +1,162 @@
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.support.ui import WebDriverWait 
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium import webdriver
+from bs4 import BeautifulSoup
+
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--incognito")
+chrome_options.add_argument("--start-maximized")
+
+chrome_options.add_argument("--enable-automation") # dont use this 
+
+chrome_options.add_argument("--disable-extensions")
+chrome_options.add_argument("--disable-popup-blocking")
+chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+chrome_options.add_experimental_option('useAutomationExtension', False)
+chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+chrome_options.add_experimental_option.add_experimental_option("excludeSwitches", ["ignore-certificate-errors", "safebrowsing-disable-download-protection", "safebrowsing-disable-auto-update", "disable-client-side-phishing-detection"])
+self.driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_options)
+
+# Crome Override user-agent 
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--incognito")
+chrome_options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36")
+driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
+driver.get(url)
+
+# Firefox Override user-agent 
+profile = webdriver.FirefoxProfile()
+profile.set_preference("general.useragent.override", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36")
+driver = webdriver.Firefox(GeckoDriverManager().install())
+driver.get(url)
+
+
+webdriver.ActionChains(self.driver).send_keys(self.keyword).send_keys(Keys.ENTER).perform()
+webdriver.ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
+webdriver.ActionChains(self.driver).send_keys(Keys.ENTER).perform()
+
+html = self.driver.page_source
+soup = BeautifulSoup(html,'html5lib') 
+
+searchList = soup.select("div[class*='" + some_name + "']")
+searchList = soup.find_all('div',attrs={'class': 'some_name'})
+for s in searchList:
+    a = s.find('div',attrs={'class': 'some_name'})
+    if a :
+       a = a.get_text()
+
+
+WebDriverWait(self.driver, 60).until(EC.presence_of_element_located((By.CLASS_NAME, self.elem['chatlist'])))
+javaScriptHeight = "return document.getElementById('pane-side').scrollHeight;"
+# Scroll of Div elem
+height = int(self.driver.execute_script(javaScriptHeight)) 
+for i in range(0,height,1000):
+    javaScriptScroll = "document.getElementById('pane-side').scrollTo(0,"+i+");"
+    self.driver.execute_script(javaScriptScroll)
+
+
+# for dynamic nature
+thing = 'cool'
+some  = self.driver.find_element_by_xpath("//div[@class='"+thing+"']").text
+self.driver.find_element_by_xpath("div[@class='"+ok+"']").click()
+self.driver.find_element_by_xpath("//input[@accept='*']").send_keys(doc)
+infoBar = self.driver.find_element_by_xpath("//a[@interactionclass='" +info+"']")
+postsPath = "//*[@class='"+posts+"']//a"
+path = self.driver.find_elements_by_xpath(postsPath)  
+
+
+# for classes with same name in first half
+# e.g ZZZ a , ZZZ b ZZZ c
+variable = 'ZZZ '
+selected = soup.find_all('div',
+             {
+                 'class': lambda x: x 
+                       and variable in x.split()
+             }
+)
+
+
+regex = re.compile('^.*copyable-text.*$')
+text = s.find('div',attrs={'class': regex})
+
+
+# For scrolling up an  div elem window 
+scrollUp = "document.getElementsByClassName("+"'"+scroll+"'"+")[0].scroll(0,-500);"
+last_height = self.driver.execute_script(javaScript)
+while True:
+    try:
+        self.driver.execute_script(up)
+        time.sleep(SCROLL_PAUSE_TIME)
+        new_height = self.driver.execute_script(javaScript)
+        if new_height == last_height :
+            break 
+        last_height = new_height 
+    except : 
+        break 
+
+
+self.driver.execute_script("window.onbeforeunload = function() {};")
+self.driver.execute_script("window.open('"+url+"', '_self')")
+self.driver.implicitly_wait(2)
+
+videosXpath = self.driver.find_elements_by_xpath("//*[@class='abc']")
+for v in videosXpath:
+    video = v.get_attribute("src")
+    fileName = 'abc.mp4'
+    r = requests.get(url)
+    if r.status_code == 200:
+        with open(fileName, 'wb') as f:
+            f.write(r.content)
+    
+height = str(self.driver.execute_script("return document.body.scrollHeight"))
+height = "-"+height
+js = "window.scrollTo(0, "+height+");"
+self.driver.execute_script(js)
+
+
+Photo = soup.find('img',attrs = {'class' : 'PhotoImg photo img'})
+if Photo:
+    Photo = Photo.get('src')
+    path = self.filePathPhotos + os.sep + self.name + '_Photo.jpg'
+    urllib.urlretrieve(Photo,path )
+    print('File saved at = {}'.format(path))
+
+
+# Helps to scroll down Fast
+def scollEnd(self):
+    SCROLL_PAUSE_TIME = 4
+    last_height = self.driver.execute_script("return document.body.scrollHeight")
+    while True:
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")  # Scroll down to bottom 
+        time.sleep(SCROLL_PAUSE_TIME) # Wait to load page
+        new_height = self.driver.execute_script("return document.body.scrollHeight")
+        print('Old height = {} , New Height = {}'.format(last_height,new_height))
+        if new_height == last_height or self.terminate :
+            return 
+        last_height = new_height 
+
+
+# Helps to scroll down smoothly 
+def scrollEnd(self):
+    SCROLL_PAUSE_TIME = 4
+    # Get scroll height
+    # last_height = self.driver.execute_script("return document.body.scrollHeight")
+    last_height = self.driver.execute_script("return window.pageYOffset") 
+    height = 350
+    while True:
+        down = str(height)
+        js = "window.scrollTo(0, "+down+");"
+        self.driver.execute_script(js)  
+        height += 350
+        time.sleep(SCROLL_PAUSE_TIME)
+        new_height = self.driver.execute_script("return window.pageYOffset")
+        if new_height == last_height :
+            break 
+        last_height = new_height 
+

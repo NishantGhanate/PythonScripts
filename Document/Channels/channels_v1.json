@@ -1,0 +1,2972 @@
+[
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ABP Ananda",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Bengali",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ABP Majha",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"The History Channel",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"FY1 TV18",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"FY1 TV18 (HD)",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Histroy TV 18 HD",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"AATH",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONY Marathi",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"BBC World News",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zoom",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Romedy Now",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MN +",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Mirror Now",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ET NOW",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Times Now",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Romedy Now HD",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Movies Now HD",
+      "channel_price":"12.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MNX HD",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MNX",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Times Now HD",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Travel XP HD",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Lifestyle",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Travel XP Tamil",
+      "channel_price":"1.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"Lifestyle",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"JAN TV PLUS",
+      "channel_price":"50.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Animal Planet",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery Channel",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery Channel \u00e2\u20ac\u201c Tamil",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery Kids Channel",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery Science",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery Turbo",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery Jeet",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery HD World",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Animal Planet HD World",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"TLC HD world",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Discovery Jeet HD",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"TLC",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Dsport",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Disney Junior",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"UTV Movies",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Marvel HQ",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Disney International HD",
+      "channel_price":"12.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Hungama TV",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"The Disney Channel",
+      "channel_price":"8.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"UTV HD",
+      "channel_price":"8.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Andhra Pradesh",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV - Telangana",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Cinema",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Life",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Plus",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Abhiruchi",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Plus HD",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Cinema HD",
+      "channel_price":"8.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Abhiruchi HD",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"ETV Life HD",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"EPIC TV",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"UTV Bindass",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"UTV Action",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Topper TV",
+      "channel_price":"59.32",
+      "channel_broadcaster":"d",
+      "channel_genre":"Miscellaneous",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Lokmat",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Living Foodz HD",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Living Travelz",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"J Movies",
+      "channel_price":"3.75",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Jaya Max",
+      "channel_price":"3.75",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Jaya Plus",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Jaya TV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONY BBC EARTH",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONY BBC EARTH HD",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Travel XP",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Lifestyle",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Good Times",
+      "channel_price":"1.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"Lifestyle",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"NDTV 24*7",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"NDTV India",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"NDTV Profit",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Fox Life",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Lifestyle",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"National Geographic Channel(NGC)",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Fox Life HD",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Lifestyle",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Nat Geo Wild",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"National Geographic HD",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Nat Geo Music HD",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Nat Geo Wild HD",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Nat Geo People HD",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Baby TV HD",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"NHK World Premium (HDDistribution)",
+      "channel_price":"1800.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Japanese",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Prarthana",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Devotional",
+      "channel_language":"Odia",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Tarang",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Odia",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Tarang Music",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Odia",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Alankar",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Odia",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Bihar Jharkhand",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Madhya Pradesh /Chattisgarh",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Rajasthan",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Uttar Pradesh/Uttaranchal",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Urdu",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Urdu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Kannada",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Bangla",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Punjab / Haryana /Himanchal Pradesh",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Punjabi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Gujarati",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Gujarati",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Odia",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Odia",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Raj Musix Kannada",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Raj Digital Plus",
+      "channel_price":"1.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Raj Musix",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Raj News",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Raj TV",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Vissa TV",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Sarthak TV",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Odia",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Mega 24",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Mega Musiq",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Mega TV",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Sony YAY!",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"AXN",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SET MAX",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MIX",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SAB",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONY ENTERTAINMENTCHANNEL (SET)",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"PIX",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SIX",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAX 2",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"PAL",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SET HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SIX HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"PIX HD",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAX HD",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONY ESPN HD",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Ten 2 HD",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Ten 3 HD",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONY ESPN",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"AXN HD",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Ten 2",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Ten 1",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Ten 3",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Ten 1 HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONY Wah",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SAB HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports 3",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports 1 Tamil",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports Select 2",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Bharat",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Movies OK",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports 1 Hindi",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Gold",
+      "channel_price":"8.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Jalsha",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Movies",
+      "channel_price":"12.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Gold Select",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Plus",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Pravah",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports 1",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports 2",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star World",
+      "channel_price":"8.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Jalsha Movies",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports HD 2",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports HD 1",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Bharat HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Gold HD",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Movies HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Plus HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star World Prmiere HD",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports 1 HD Hindi",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports Select 1",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Movies Select HD",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star World HD",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports First",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAA Gold",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAA Movies",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAA Music",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAA TV",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Pravah HD",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Jalsha HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bangla",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Jalsha Movies HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Bangla",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports Select HD 1",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sports Select HD 2",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAA HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Gold Select HD",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MAA Movies HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sport 1 Telugu",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Sport 1 Kannada",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Sports",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Utsav",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Utsav Movies",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Adithya TV",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Chintu TV",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Chutti TV",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini Comedy",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini Life",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini Movies",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini Music",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini News",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini TV",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"KTV",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Surya Movies",
+      "channel_price":"11.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Malayalam",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Kushi TV",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SUN Life",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Sun Music",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Sun News",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Surya Music",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Malayalam",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SUN TV",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Surya Comedy",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Malayalam",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Surya TV",
+      "channel_price":"12.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Malayalam",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Udaya Comedy",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Udaya Movies",
+      "channel_price":"16.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Udaya Music",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Udaya News",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Udaya TV",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Kochu TV",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Malayalam",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Sun TV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"KTV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Tamil",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Sun Music HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Tamil",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini TV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini Music HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Gemini Movies HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Surya TV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Malayalam",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Udaya TV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Kannada",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Food Food TV",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Cartoon Network",
+      "channel_price":"4.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"CNN International",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"HBO",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"POGO",
+      "channel_price":"4.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Cartoon Network HD+",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"WB",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"HBO HD",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"CNN News 18",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"CNBC Bajaar",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Gujarati",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"CNBC TV 18 Prime HD",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"CNBC Awaaz",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Tamil Nadu",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Kerala",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Malayalam",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 Assam / North East",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Assamese",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"News 18 India",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"CNBC TV 18",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Aaj Tak",
+      "channel_price":"0.75",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"India Today",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"AAJ Tak HD",
+      "channel_price":"1.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Aaj Tak Tez",
+      "channel_price":"0.25",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Comedy Central (HDDistribution)",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MTV",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"NICK",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"NICK JR",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"SONIC",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"VH 1 (HD Distribution)",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Infinity HD",
+      "channel_price":"9.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Infinity",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"NICKS HD+",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kids",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Rishtey Cineplex",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MTV Beats",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Kannada HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Kannada",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Marathi HD",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Bangla HD",
+      "channel_price":"14.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bangla",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Super",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Bangla",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Gujarati",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Gujarati",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Kannada",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Marathi",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Oriya",
+      "channel_price":"6.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Oriya",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MTV Beats HD",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Tamil",
+      "channel_price":"3.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Cineplex HD",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"VH 1",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Tamil HD",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"MTV HD+",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Rishtey",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Kannada Cinema",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Gujarati Cinema",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Gujarati",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Comedy Central",
+      "channel_price":"7.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Colors Bangla Cinema",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Vijay TV",
+      "channel_price":"17.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Vijay Super",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Vijay HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Asianet",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Malayalam",
+      "channel_language":"GEC",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Asianet Plus",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Malayalam",
+      "channel_language":"GEC",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Asianet Movies",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Malayalam",
+      "channel_language":"Movies",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Suvarna Plus",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kannada",
+      "channel_language":"Movies",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Suvarna",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kannada",
+      "channel_language":"GEC",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Asianet HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Malayalam",
+      "channel_language":"GEC",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Star Suvarna",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Kannada",
+      "channel_language":"GEC",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"24 Ghanta",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Bollywood",
+      "channel_price":"2.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Action",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Bangla Cinema",
+      "channel_price":"5.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Caf\u00c3\u00a9 HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Caf\u00c3\u00a9",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Cinema",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Talkies",
+      "channel_price":"12.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee TV",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zing",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"& Picture",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Bangla",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bangla",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Marathi",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Living Foodz",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"English/Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee TV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Cinema HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"& TV",
+      "channel_price":"12.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"& TV HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Kannada",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Kannada",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Telugu",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"& Pictures HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English/Hindi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Cinemalu",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Yuva",
+      "channel_price":"4.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Marathi HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Marathi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Living Zen",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"Infotainment",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"& Prive HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Bangla HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bangla",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Tamil HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Cinemalu HD",
+      "channel_price":"16.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Telugu HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Telugu",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Tamil",
+      "channel_price":"12.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Tamil",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Kannada HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Kannada",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Anmol Cinema",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"& Flix HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"& Flix",
+      "channel_price":"15.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Keralam HD",
+      "channel_price":"8.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Malayalam",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Keralam",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Malayalam",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee ETC",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"Music",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Anmol",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Big Magic",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Big Ganga",
+      "channel_price":"0.50",
+      "channel_broadcaster":"d",
+      "channel_genre":"GEC",
+      "channel_language":"Bhojpuri",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Talkies HD",
+      "channel_price":"19.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"Marathi",
+      "channel_quality":"HD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee 24 Taas",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Marathi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Odisha",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Odia",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Business",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Punjab HaryanaHimachal",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Madhya PradeshChattisgarh",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Salaam",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Urdu",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee 24 Kalak",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"WION",
+      "channel_price":"1.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Uttar PradeshUttrakhand",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Hindustan",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Ezmall.com",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"Miscellaneous",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Bihar Jharkhand",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee News",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Zee Rajasthan News",
+      "channel_price":"0.10",
+      "channel_broadcaster":"d",
+      "channel_genre":"News",
+      "channel_language":"Hindi",
+      "channel_quality":"SD"
+   },
+   {
+      "channel_icon":"assests/icons/1.png",
+      "channel_name":"Movies Now",
+      "channel_price":"10.00",
+      "channel_broadcaster":"d",
+      "channel_genre":"Movies",
+      "channel_language":"English",
+      "channel_quality":"SD"
+   }
+]

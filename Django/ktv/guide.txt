@@ -1,0 +1,130 @@
+Django Guide :
+
+django-admin startproject ktv
+
+python manage.py runserver
+
+python manage.py runserver 8080
+
+pip install mysqlclient 
+
+
+settings.py 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ktvdb',
+        'USER': 'root',
+        'PASSWORD' : '',
+        'HOST' : 'localhost'
+    }
+}
+
+
+python manage.py createsuperuser --username=nishant --email=test@gmailcom
+password :abcd1234
+or 
+winpty python manage.py createsuperuser
+
+
+python manage.py startapp posts
+
+project-> settings.py -> Installed_Apps -> 'posts'
+
+project -> urls - > 
+from django.urls import path , include
+path('posts/', include('posts.urls')),
+
+
+postapp -> create urls.py 
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index , name='index')
+];
+
+postapp -> create templates folder
+postapp -> create views.py 
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse('Hello from posts')
+
+
+Create templates/posts/ layout.html in posts app
+
+view.py 
+
+def index(request):
+    return render(request,'posts/index.html' , {'title' : 'Dynamic data'})
+
+layout.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Title Testing</title>
+</head>
+<body>
+    <header class="container center-align"> 
+     <h1> MAIN PAGEEEEEEEE</h1>
+    </header>
+
+    <div class="contaniner">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+</body>
+</html>
+
+inde.html 
+
+{% extends 'posts/layout.html' %}
+
+
+{% block content %}
+
+<h2> {{title}} </h2>
+
+{% endblock %}
+
+
+--------
+posts-> models.py
+
+from django.db import models
+from datetime import datetime
+# Create your models here.
+class Posts(models.Model):
+    title = models.CharField(max_length=100)
+    body = models.TextField()
+    created_at = models.DateTimeField(default=datetime.now,blank=True)
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name_plural = "Posts"
+
+cmd : python manage.py makemigrations posts
+
+     python manage.py migrate
+
+
+admin .py 
+from django.contrib import admin
+
+# Register your models here.
+from .models import Posts
+
+admin.site.register(Posts)
+
