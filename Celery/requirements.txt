@@ -1,0 +1,4 @@
+celery
+sqlalchemy
+redis
+psycopg2
