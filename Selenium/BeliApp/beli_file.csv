@@ -1,0 +1,51 @@
+restaurant_name,dollar_sign,neighborhood,city,rating,categories
+4 Charles Prime Rib,$$$, West Village, New York ,10.0," American, Burgers, Steakhouse"
+SAGA,$$$$, Financial District, New York ,10.0, Global
+Le Bernardin,, Theater District, New York ,10.0,French
+Peter Luger Steak House,$$$$, Southside, New York ,10.0," American, Steakhouse"
+Don Angie,$$$, West Village, New York ,10.0, Italian
+The Mad Hatter Restaurant,$$$, Sanibel ,,10.0,
+Vetri Cucina,$$$$, Washington Square West, Philadelphia ,10.0," American, Italian"
+Bern's Steak House,$$$$, Historic Hyde Park North, Tampa ,10.0," American, Dessert, Steakhouse"
+Misi,$$$, Williamsburg, New York ,10.0, Italian
+The Daily Catch Restaurant,$$, North End, Boston ,10.0," Italian, Seafood"
+I Sodi,$$$, West Village, New York ,10.0, Italian
+L'Artusi,$$$, West Village, New York ,10.0, Italian
+Marea,$$$$, Midtown West, New York ,10.0," Italian, Seafood"
+Oxomoco,$$$, Greenpoint, New York ,9.9, Mexican
+The Four Horsemen,$$$, Williamsburg, New York ,9.9, American
+Vernick Food & Drink,$$$, Center City West, Philadelphia ,9.9," American, French"
+Barclay Prime,$$$$, Rittenhouse Square, Philadelphia ,9.9, Steakhouse
+Raoul's,$$$, South Village, New York ,9.9," Bistro, French"
+Au Cheval,$$$, Lower Manhattan, New York ,9.9," American, Diner"
+Lilia,$$$, Williamsburg, New York ,9.9, Italian
+Via Carota,$$$, West Village, New York ,9.9, Italian
+Fiorella Pasta,$, Bella Vista, Philadelphia ,9.9, Italian
+Pelican & Pig,, Greenwood, Nashville ,9.9,American
+Laser Wolf,$$, Olde Kensington, Philadelphia ,9.9," Israeli, Middle Eastern"
+Chubby Fish,, Cannonborough Elliotborough, Charleston ,9.9,Seafood
+Angelo's Pizzeria,, Bella Vista, Philadelphia ,9.9,Pizza
+Joe's Stone Crab,$$$, South Beach, Miami Beach ,9.9," American, Seafood"
+Thai Diner,$$, Nolita, New York ,9.9, Thai
+The Salt House,$$, Prallsville, New Hope ,9.9, Gastropub
+Minetta Tavern,$$$, South Village, New York ,9.9," American, Burgers, Steakhouse"
+Carbone,$$$, South Village, New York ,9.9, Italian
+Murph's Bar,$$, Fishtown, Philadelphia ,9.9," Bar, Irish, Italian"
+Zahav,$$$, Society Hill, Philadelphia ,9.9, Israeli
+Prince's Hot Chicken Shack South,$, Townhomes of Shadow Glen, Nashville ,9.9," American, Southern"
+Joe's Steaks + Soda Shop,$, Wissinoming, Philadelphia ,9.9,
+Suraya Restaurant,$$, North Philadelphia, Philadelphia ,9.9," Lebanese, Middle Eastern"
+Dalessandro's Steaks,$, Philadelphia ,,9.9, Sandwiches
+Emily,$$, Clinton Hill, New York ,9.8," Burgers, Pizza"
+Arnold’s Lobster & Clam Bar,$$, North Eastham, Eastham ,9.8," Ice Cream, Seafood"
+Pizzeria Beddia,$$, Fishtown, Philadelphia ,9.8, Pizza
+Frank Pepe Pizzeria Napoletana,$$, Wooster Square, New Haven ,9.8, Pizza
+Honey,$$$, Doylestown ,,9.8,
+Henlopen City Oyster House,$$$, Rehoboth Beach ,,9.8, Seafood
+South Philly Barbacoa,$, Passyunk Square, Philadelphia ,9.8," Mexican, Taqueria"
+L'Industrie Pizzeria,$, Williamsburg, New York ,9.8, Pizza
+Alpen Rose,, Midtown Village, Philadelphia ,9.8,Steakhouse
+Golden Diner,$$, Two Bridges, New York ,9.8," American, Diner"
+Little Fish BYOB,$$$, Bella Vista, Philadelphia ,9.8," American, Seafood"
+Laurel Restaurant,$$$$, East Passyunk Crossing, Philadelphia ,9.8," American, French"
+Neptune Oyster,$$$, North End, Boston ,9.8," American, New England, Seafood"

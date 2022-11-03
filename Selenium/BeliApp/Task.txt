@@ -1,0 +1,20 @@
+https://app.beliapp.com/lists/northeatsbias
+
+We need to get to extract the following pieces of information from each list:
+- Name of Restaurant
+- Dollar Sign
+- Categories
+- Neighborhood
+- City
+- Rating
+
+For the first entry on the list above, the information would be the following:
+- Name of Restaurant: 4 Charles Prime Rib
+- Dollar Sign: $$$
+- Categories: American, Burgers, Steakhouse
+- Neighborhood: West Village
+- City: New York
+- Rating: 10.0
+
+Turnaround speed is really important! Please only apply if you can get this done within a few hours. Thank you!
+ 

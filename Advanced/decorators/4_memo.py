@@ -1,9 +1,11 @@
 import time
 
-cached = {}
+
 
 def memo(wrapped_func):
+    cached = {}
     def inner(n1, n2):
+        nonlocal cached
         params = '{}{}'.format(n1, n2)
         if params not in cached:
             value = wrapped_func(n1, n2)
