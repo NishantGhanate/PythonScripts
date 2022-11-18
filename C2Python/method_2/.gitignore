@@ -1,0 +1,4 @@
+build
+Cpackages.egg-info
+dist
+my_demo_module.egg-info
